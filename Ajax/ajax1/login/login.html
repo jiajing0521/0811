@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    用户名: <input type="text" id="user">
+    密码: <input type="text" name="" id="pwd">
+    <button id="login">登录</button>
+</div>
+<img id="img" src="" alt="" style="display: none;">
+
+<script src="../../ajsx2/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //后台接口:::::
+    //url : login.php
+    //method : post
+    //参数 : user(string): 用户名, pwd(string): 密码
+    //返回值: {"err": 0, "headImg":"xx.img"}
+    //err:0成功,1失败
+
+    var user = document.getElementById("user");
+    var pwd = document.getElementById("pwd");
+    var login = document.getElementById("login");
+    var img = document.getElementById("img");
+
+    login.onclick = function () {
+        $.post("login.php", {user:user.value,pwd:pwd.value}, function (data) {
+            //把后台返回的json字符串转成js对象使用
+            var obj = JSON.parse(data);
+            //成功
+            if (obj.err == 0){
+                img.style.display = "block";
+                img.src = obj.headImg;
+            //失败
+            }else{
+                alert("用户名或密码错误,请重新输入");
+            }
+        })
+    }
+</script>
+</body>
+</html>

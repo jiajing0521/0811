@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json</title>
+</head>
+<body>
+<script src="../ajsx2/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //把json字符串解析成js中的对象
+    var obj = JSON.parse('{"name":"豪哥","age":"20"}');
+    console.log(obj.name);
+
+
+    //把js对象转为json字符串
+    var str = JSON.stringify({a:1,b:2});
+    console.log(str);
+
+    $.get("04_json.php",function (data) {
+    console.log(data);
+        var obj = JSON.parse(data);
+        console.log(obj);
+    })
+
+</script>
+</body>
+</html>

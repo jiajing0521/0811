@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    var xhr;
+    if (window.XMLHttpRequest){
+        xhr = new XMLHttpRequest();
+    }else{
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xhr.open("post","1.php",true);
+    //post 必须加的,设置请求头,即告诉后台发送的内容的格式
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xhr.send("username=豪哥&password=123");
+
+    xhr.onreadystatechange = function () {
+
+        if (xhr.readyState == 4){
+            if (xhr.status == 200){
+                console.log(xhr.responseText);
+            }
+        }
+
+    };
+
+
+
+</script>
+
+</body>
+</html>

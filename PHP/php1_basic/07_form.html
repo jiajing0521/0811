@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+<!--默认get-->
+<!--file上传时，需要在form标签中添加属性enctype="multipart/form-data"-->
+<form action="07_form.php" method="post" enctype="multipart/form-data">
+    用户名：<input type="text" name="username" >
+    密码：<input type="text" name="password">
+    <input type="file" name="file">
+    <inpt type="submit" value="提交">
+</form>
+</body>
+</html>

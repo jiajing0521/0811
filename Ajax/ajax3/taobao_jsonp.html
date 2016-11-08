@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝</title>
+    <style>
+        input{
+            width: 200px;
+            height: 20px;
+        }
+        a{
+            display: block;
+            width: 200px;
+            line-height: 30px;
+            background-color: #e2e2e2;
+            text-decoration: none;
+            color: #2d2d2d;
+        }
+        a:hover{
+            background-color: #c1c1c1;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="text">
+<script src="../ajax2/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //调用淘宝函数
+    function cb(obj) {
+        $(".clear").remove();
+        var $arr = obj["result"];
+        for (var i = 0; i < $arr.length; i++){
+            var list = $("<a href = 'https://s.taobao.com/search?initiative_id=tbindexz_20161104&ie=utf8&spm=a21bo.50862.201856-taobao-item.2&sourceId=tb.index&search_type=item&ssid=s5-e&commend=all&imgfile=&q="+$arr[i][0]+"&suggest=0_1&_input_charset=utf-8&wq=%E6%89%93%E5%BA%95%E8%A3%A4&suggest_query=%E6%89%93%E5%BA%95%E8%A3%A4&source=suggest'></a>");
+            list.attr("class","clear");
+            list.html($arr[i][0]);
+            $("body").append(list);
+        }
+    }
+    $(function () {
+        //每次按动键盘添加一个事件,创建一个script标签
+        $("#text").on("keyup",function (e) {
+            //删除上一次添加的script标签
+            $("script[name=json]").remove();
+            //script标签只会加载一次,所以加载完成后,就可以删掉
+            var script = $("<script>");
+            //给script标签添加属性src,name,可以以对象的形式添加,类似于css和animate
+            //地址栏里的参数callback为函数,名字为cb,q为搜索关键字,值为每次键盘输入的input的value值
+            //通过以上方式,可以请求到淘宝上的搜索框返回值
+            script.attr({"src":"https://suggest.taobao.com/sug?code=utf-8&q="+$("#text").val()+"&_ksTS=1478248549946_2180&callback=cb&k=1&area=c2c&bucketid=9",
+                name:"jsonp"});
+            //把新创建的script标签加入到body中
+            $("body").append(script);
+            var e = e || window.event;
+            if (e.keyCode == 13){
+                if ($("input").val() != ""){
+                    window.location="https://s.taobao.com/search?initiative_id=tbindexz_20161104&ie=utf8&spm=a21bo.50862.201856-taobao-item.2&sourceId=tb.index&search_type=item&ssid=s5-e&commend=all&imgfile=&q="+$("input").val()+"&suggest=0_1&_input_charset=utf-8&wq=%E6%89%93%E5%BA%95%E8%A3%A4&suggest_query=%E6%89%93%E5%BA%95%E8%A3%A4&source=suggest";
+                }
+            }
+        })
+    })
+
+</script>
+<!--<script src="https://suggest.taobao.com/sug?code=utf-8&q=言承旭&_ksTS=1478248549946_2180&callback=cb&k=1&area=c2c&bucketid=9" type="text/javascript"></script>-->
+
+</body>
+</html>

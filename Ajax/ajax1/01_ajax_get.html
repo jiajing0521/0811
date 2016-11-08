@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+</head>
+<body>
+<script type="text/javascript">
+    //ajax异步的js和xml(Asynchronous JavaScript and XML)
+    //有兼容性
+
+    //现代浏览器
+    var xhr;
+    if (window.XMLHttpRequest){
+         xhr = new XMLHttpRequest();
+    }else{
+        //IE
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    //1....打开网络请求
+    //参数一:请求方法get/post
+    //参数二:请求路径(文件路径)
+    //参数三:是否异步(true为异步,false为同步)
+    xhr.open("get","1.txt",true);
+
+    //2....发送
+    xhr.send();
+
+    //3....监听状态
+    xhr.onreadystatechange = function () {
+        //xhr代理状态
+        //0	UNSENT	代理被创建，但尚未调用 open() 方法。
+        //1	OPENED	open() 方法已经被调用。
+        //2	HEADERS_RECEIVED	send() 方法已经被调用，并且头部和状态已经可获得。
+        //3	LOADING	下载中； responseText 属性已经包含部分数据。
+        //4	DONE	下载操作已完成。
+        console.log(xhr.readyState);
+        //4代表请求完成
+        if (xhr.readyState == 4){
+            //xhr.status:http协议的状态码
+            //2xx表示成功
+            //3xx表示重定向
+            //4xx表示客户端错误
+            //5xx表示服务器错误
+            console.log(xhr.status);
+            if (xhr.status == 200){
+                console.log(xhr.responseText);
+            }
+        }
+    };
+
+    function ajax(method,url,success) {
+        //ajax异步的js和xml(Asynchronous JavaScript and XML)
+        //有兼容性
+
+        //现代浏览器
+        var xhr;
+        if (window.XMLHttpRequest){
+            xhr = new XMLHttpRequest();
+        }else{
+            //IE
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //1....打开网络请求
+        //参数一:请求方法get/post
+        //参数二:请求路径(文件路径)
+        //参数三:是否异步(true为异步,false为同步)
+        xhr.open(method,url,true);
+
+        //2....发送
+        xhr.send();
+
+        //3....监听状态
+        xhr.onreadystatechange = function () {
+            //xhr代理状态
+            //0	UNSENT	代理被创建，但尚未调用 open() 方法。
+            //1	OPENED	open() 方法已经被调用。
+            //2	HEADERS_RECEIVED	send() 方法已经被调用，并且头部和状态已经可获得。
+            //3	LOADING	下载中； responseText 属性已经包含部分数据。
+            //4	DONE	下载操作已完成。
+            //4代表请求完成
+            if (xhr.readyState == 4){
+                //xhr.status:http协议的状态码
+                //2xx表示成功
+                //3xx表示重定向
+                //4xx表示客户端错误
+                //5xx表示服务器错误
+                console.log(xhr.status);
+                if (xhr.status == 200){
+                    success(xhr.responseText);
+                }
+            }
+        }
+    }
+    ajax("get","1.php?username=豪哥&password=123",function (resText) {
+        console.log(resText);
+    })
+
+
+</script>
+</body>
+</html>

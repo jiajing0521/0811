@@ -1,0 +1,583 @@
+﻿body{font-family:simsun;font-size:12px;}
+.main{width:990px;margin:15px auto;}
+.main3{width:970px;margin:15px auto;padding:0 10px;background-color:#f7f7f7;font-size:12px;padding-bottom:20px;}
+.main4{padding-left:7px;width:973px;}
+.clearfix{clear:both;}
+a{text-decoration:none;color:#315aaa;}
+a:visited{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.valign8{vertical-align:-8px;}
+/**职位搜索**/
+.Search-boxtop{height:7px;overflow:hidden;background:url(../images/bg_sprites.png) 0 -100px no-repeat;}
+.Search-boxbottom{height:12px;overflow:hidden;background:url(../images/bg_sprites.png) 0 -112px no-repeat;}
+.search{background:url(../images/search_middlebg.png) top repeat-x #3f7dd5;border-left:1px solid #3e7cd4;border-right:1px solid #3e7cd4;}
+#funSearch{width:988px;}
+#searchForm{height:auto;font-size:12px;}
+#searchForm div{float:left; height:58px; width:290px;overflow:hidden;display:inline;font-size:12px;text-align:left;color:#fff;background:none;margin:10px 0px 0 30px;}
+#searchForm div input{font-size:12px;}
+#searchForm div span{line-height:30px;height:30px;display:block;color:#fff;}
+#searchForm div a{color:#fff;}
+#searchForm div a:hover,#searchForm div .keyword-tab a.current:hover{text-decoration:none;}
+#searchForm div .keyword-tab{color:#4572b3;}
+#searchForm div .keyword-tab a{display:inline-block;text-align:center;width:62px;height:27px;line-height:27px;margin-top:3px;}
+#searchForm div .keyword-tab a:hover{text-decoration:underline;}
+#searchForm div .keyword-tab a.current{background:url(../images/search_keywordtab.png) bottom no-repeat;}
+#searchForm .industry input,#searchForm .job input,
+#searchForm .workingtime input,#searchForm .degree input,
+#searchForm .comptype input,#searchForm .compsize input{width:256px;padding-left:25px;text-align:left;background:url(../images/botton_sprites.png) 0 0 no-repeat;width:290px;height:27px;overflow:hidden;line-height:26px;cursor:pointer;margin-left:0;}
+#searchForm .industry input:hover,#searchForm .job input:hover,
+#searchForm .workingtime input:hover,#searchForm .degree input:hover,
+#searchForm .comptype input:hover,#searchForm .compsize input:hover{background-position:0 -50px;}
+#searchForm .industry input:active,#searchForm .job input:active,
+#searchForm .workingtime input:active,#searchForm .degree input:active,
+#searchForm .comptype input:active,#searchForm .compsize input:active{background-position:0 -100px;}
+#searchForm .time select,#searchForm .Distance select{width:290px;padding:4px;height:27px;}
+#searchForm .keyword{width:610px;height:60px;background:none;}
+#searchForm .keyword input{background:url(../images/search_keyword.png) no-repeat;color:#999;height:19px;line-height:18px;width:595px;padding:4px 0 4px 15px;}
+#KeyWord_kw2{margin:0;}
+#searchForm .city2 input,#searchForm .markcity input,#searchForm .landmark input{width:215px;height:19px;line-height:18px;text-align:left;padding:4px 0 4px 10px;margin:0;background:url(../images/bg_sprites.png) 0 0 no-repeat;float:left;}
+#searchForm .city2 input:hover,
+#searchForm .markcity input:hover,
+#searchForm .landmark input:hover{background-position:0 0;}
+#searchForm .city2 .search-citybtn,
+#searchForm .markcity .search-citybtn,
+#searchForm .landmark .search-citybtn{background-position:-226px 0;width:65px;height:27px;margin-top:0;cursor:pointer;}
+#searchForm .city2 .search-citybtn:hover,
+#searchForm .markcity .search-citybtn:hover,
+#searchForm .landmark .search-citybtn:hover{background-position:-226px 0;}
+#searchForm .searchbtn{text-align:right;padding-right:20px;width:270px;}
+#searchForm .searchbtn .doesSearch{background:url(../images/botton_sprites.png) -300px -103px no-repeat;width:129px;height:34px;}
+#searchForm .searchbtn .doesSearch:hover{background-position:-300px -50px;}
+/*按下效果*/
+/*#searchForm .searchbtn .doesSearch:active{background-position:-300px 0px;}*/
+#searchForm .searchbtn a{margin-left:10px;}
+#searchForm .searchbtn a:hover{text-decoration:underline;}
+#searchForm .hot-keyword{width:930px;height:24px;line-height:24px;color:#406aa7;margin-top:0;}
+#searchForm .hot-keyword em{color:#c2dbfe;}
+#searchForm .hot-keyword a{margin:0 5px;}
+#searchForm .hot-keyword a:hover{text-decoration:underline;}
+#searchForm .Salary-range select{width:102px;padding:4px;height:27px;}
+#searchForm .job-category .category{line-height:27px;vertical-align:-2px;margin-right:16px;}
+#searchForm .job-category .category input{vertical-align:-2px;margin-right:5px;}
+#searchForm .returnback{width:930px;height:21px;padding-top:5px;text-align:right;margin-top:0;background:url(../images/returnback_bg.png) bottom repeat-x;}
+#searchForm .returnback:hover{background:url(../images/returnback_bg.png) bottom repeat-x;}
+#searchForm .returnback a{background:url(../images/returnback.png) left no-repeat;padding-left:18px;}
+#searchForm .slideUp a{background:url(../images/sligup.png) left center no-repeat;padding:6px 0 5px 22px;line-height:20px;}
+#searchForm .slideUp a.down{background:url(../images/sligdown.png) left center no-repeat;}
+#searchForm .slideUp,#searchForm .searchbtn{margin-top:15px;height:36px;}
+#searchForm #moreoption{margin:0;padding:0;width:988px;height:auto;}
+/**地图搜索 职位 工作 长度小**/
+#searchForm .industry-small,#searchForm .job-small,#searchForm .workingtime-small,#searchForm .degree-small,#searchForm .comptype-small,#searchForm .compsize-small{width:225px;}
+#searchForm .job-small,#searchForm .degree-small,#searchForm .compsize-small,#searchForm .job-category-small{margin-left:10px;}
+#searchForm .searchbtn-small{text-align:center;}
+#searchForm .industry-small input,#searchForm .job-small input,
+#searchForm .workingtime-small input,#searchForm .degree-small input,#searchForm .comptype-small input,#searchForm .compsize-small input{width:225px;background:url(../images/botton_sprites.png) 0 -140px no-repeat;}
+#searchForm .industry-small input:hover,#searchForm .job-small input:hover,#searchForm .workingtime-small input:hover,#searchForm .degree-small input:hover,#searchForm .comptype-small input:hover,#searchForm .compsize-small input:hover{background-position:0 -170px;}
+#searchForm .industry-small input:active,#searchForm .job-small input:active{background-position:0 -200px;}
+#searchForm .industry-small input:visited{background-position:0 -200px;}
+#searchForm .keyword-small,#searchForm .Salary-range-long{width:320px;margin-left:10px;}
+#searchForm .Salary-range-long select{width:118px;}
+#searchForm .keyword-small input{width:305px;background:url(../images/search_keywordsmall.png) no-repeat;}
+#searchForm .time-small,#searchForm .city-small{width:130px;margin-left:10px;}
+#searchForm .time-small select{width:128px;}
+#searchForm .city-small input{background:url(../images/bg_sprites.png) -700px 0 no-repeat;width:57px;}
+#searchForm .city-small .search-citybtn{width:63px;background-position:-767px 0;padding-left:0;}
+#searchForm .city-small .search-citybtn:hover{background-position:-767px 0;}
+/**sou suo song 20120604**/
+#searchForm div:hover{background:none;}
+#searchForm .currentFocus{background:none;}
+/**search-History**/
+.search-History{width:970px;margin:0px auto;font-size:12px;background:url(../images/search_history_result.png) bottom repeat-x #c9e9ff;}
+.search-History-bottom{width:100%;height:14px;overflow:hidden;background:url(../images/search-historybottom.png) bottom no-repeat;}
+.search-History-Result{border-left:1px solid #d6eaff;border-right:1px solid #d6eaff;padding:10px 20px;padding-bottom:0;line-height:24px;}
+.search-History-Result dt{font-weight:bold;color:#555;width:68px;float:left;}
+.search-History-Result dd{width:850px;height:24px;overflow:hidden;float:right;color:#315aaa;padding-left:10px;background:url(../images/dotted.png) left no-repeat;}
+.search-History-Result dd.clearfix{background:none;float:none;height:0;}
+/**广告位**/
+.adsBox{margin-top:20px;}
+.ad4in1 li{float:left;margin-right:9px; width:157px; overflow:hidden;}
+.adsBox a{display:inline-block;}
+.adsBox img{width:155px;height:53px;border:1px solid #8c8481;}
+.ad4in1 li:nth-child(6n){margin-right:0;}
+/**分类导航**/
+.cate-nav{margin-top:20px;border:1px solid #e0e0e0;padding:1px;width:990px;color:#555;font-size:12px;}
+.cate-nav h2{font-weight:bold;padding-left:20px;font-size:16px;height:42px;line-height:40px;background:url(../images/cateNavDtbg.png) repeat-x;}
+.cate-tree{float:left;height:425px;overflow-y:auto;}
+.cate-tree{cursor:pointer;}
+.cate-tree-lv1{width:160px;background-color:#e9e9e9;}
+.cate-tree-lv1 ul{width:140px;float:right;margin-top:12px;}
+.cate-tree-lv1 li{padding:17px 20px;font-size:14px;}
+.cate-tree-lv1 li.current{font-weight:bold;background-color:#f7f7f7;}
+.cate-tree-lv2,.cate-tree-lv3{background-color:#f7f7f7;width:235px;border-right:1px solid #ccc;}
+.cate-tree-lv3{width:270px;}
+.cate-tree-lv2 ul,.cate-tree-lv3 ul,.cate-tree-lv4 ul{margin:30px 0 0 10px;width:94%;*width:88%;}
+.cate-tree-lv2 li,.cate-tree-lv3 li,.cate-tree-lv4 li{height:24px;line-height:24px;padding-left:10px;border:1px solid transparent;margin-bottom:5px;/* hack for ie6 bordercolor's transparent */_border-color:gray;_filter:chroma(color=gray);}
+.cate-tree-lv2 li.current,.cate-tree-lv2 li:hover,.cate-tree-lv3 li.current,.cate-tree-lv3 li:hover{background-color:#f7f7f7;border:1px solid #dbdbdb;}
+.cate-tree-lv2 li.current,.cate-tree-lv3 li.current{font-weight:bold;background:url(../images/cateNavArrow.png) no-repeat 97%;}
+.cate-tree-lv2 li.current,.cate-tree-lv3 li.current{background-color:#fff;}
+/* 第四列，当有第四列时 */
+.cate-tree-lv4{width:323px;}
+/* 第四列，当之有三列时 */
+.cate-tree-lv4.col3, .cate-tree-lv4.col1{width:590px;}
+.cate-tree-lv4.col3 li{float:left;width:160px;margin-left:10px;}
+.cate-tree-lv4.col1 li{width:100%;}
+.clearfix{clear:both;}
+/**职位终端**/
+.Terminal-title{font-size:20px;font-family:黑体;color:#315aaa;height:50px;overflow:hidden;line-height:52px;padding:4px 0 0 30px;}
+/**公司介绍**/
+.left-box{width:811px;background:url(../images/shadowmid.png) left repeat-y;float:left;overflow:hidden;}
+.left-boxtop{height:11px;overflow:hidden;background:url(../images/shadowtop1.png) left no-repeat;}
+.left-boxbot{height:12px;overflow:hidden;background:url(../images/shadowbot.png) left no-repeat;}
+.left-boxmid{padding:8px 20px;}
+.right-box{float:right;width:155px;overflow:hidden;}
+.basic-information{padding-bottom:15px;border-bottom:2px solid #d6e5f8;}
+.basic-information-bg{border-bottom:0;}
+.basic-information dt,.basic-information dd{float:left;line-height:28px;}
+.basic-information dt{color:#999;width:68px;padding-left:10px;height:28px;overflow:hidden;}
+.basic-information dd{color:#333;width:525px;}
+.basic-information dd.clearfix{width:100%;height:0px;clear:both;float:none;font-size:0;overflow:hidden;}
+.basic-information .company-logo{float:right;text-align:right;width:149px;height:90px;padding:10px 10px 0 0;}
+.basic-information .company-logo img{/* width:120px; */max-height: 95px;}
+.company-headline{font-size:14px;font-weight:bold;color:#555;padding-left:10px;line-height:35px;height:35px;background-color:#edf6ff;}
+.company-headline a{margin-left:5px;display:inline-block;line-height:30px;margin-top:5px;padding:0 5px;}
+.company-headline .current{color:#333;background-color:#fff;}
+.company-headline .current:hover{text-decoration:none;}
+.company-introduction{font-size:14px;color:#555;padding:10px;line-height:24px;}
+.company-introduction p{padding:8px 0;}
+.img-valign{display:inline-block;width:107px;height:30px;vertical-align:-8px;background:url(../images/button_sprites.png) 0 -96px no-repeat;}
+.img-valign:hover{background-position:0 -128px;}
+.img-valign:active{background-position:0 -160px;}
+.img-valign img{visibility:hidden;}
+.view-btn{width:111px;height:28px;margin-top:3px;background:url(../images/button_sprites.png) -89px 0 no-repeat;float:right;*margin-top:-32px;}
+.view-btn:hover{background-position:-89px -29px;}
+.view-btn:active{background-position:-89px -58px;}
+.city-job-tab{font-size:14px;color:#d0cfcf;line-height:38px;border-bottom:2px solid #d6e5f8;}
+.city-job-tab a{color:#315aaa;margin:0 20px;display:inline-block;}
+.city-job-tab a.current{text-decoration:none;font-weight:bold;color:#555555;background:url(../images/blurup.png) bottom center no-repeat}
+.basic-time{font-size:13px;margin-top:10px;border:0;}
+.basic-time dt{width:80px;font-family:simsun; line-height:17px;}
+.basic-time dd{width:620px; height:28px; line-height:17px;}
+.basic-time dd img{vertical-align:-2px;}
+.basic-time dd a{color:#315aaa;}
+.headline_small{font-weight:bold;color:#333;line-height:24px;}
+.other_do{line-height:26px;padding:5px 0 15px 0;/*border-bottom:1px solid #e3e3e3;*/}
+.other_do dd,.other_do li{padding-left:20px;}
+.other_do .num{background:url(../images/icon_sprites.png) no-repeat;}
+.other_do .num1{background:url(../images/company_map_icon.png) left center no-repeat;}
+.other_do .num2{background:url(../images/company_position_icon.png) left center no-repeat;}
+.other_do .num3{background-position: 0 4px;}
+.other_do .num4{background-position: 0 -26px ;}
+.other_do .num5{background-position: 0 -55px ;}
+.other_do .num6{background-position: 0 -80px ;}
+.other_do .num7{background-position:0 -106px;}
+.other_do .num8{background-position: 0 -128px ;}
+.question{/*border-top:1px solid #fff;*/padding-top:10px;}
+.wendao_search{background:url(../images/wendao_searchbtn.png) right no-repeat white;border:1px solid #b2b2b2;height:24px;line-height:24px;margin-top:5px;}
+.wendao_search input{width:115px;padding-left:5px;color:#999;font-size:12px}
+.wendao_search .wendao_searchbtnz{width:27px;height:24px;cursor:pointer;background:none;}
+.qestion_btn{width:74px;height:28px;background:url(../images/button_sprites.png) 0 0 no-repeat;margin-top:10px;}
+.qestion_btn:hover{background-position:0 -28px;}
+.qestion_btn:active{background-position:0 -56px;}
+/*********song-2012-09-24**/
+.question .headline_small_qa{background:url(../images/wendao_icon1.png) left no-repeat; padding-left:16px;}
+.question .headline_small_qa span{background:url(../images/wendao_icon2.png) right top no-repeat; padding-right:10px; padding-top:3px;}
+.wendao_search_qa{background:#fff;line-height:24px;margin-top:5px;}
+.wendao_search_qa input{width:145px;padding-left:5px;color:#999; border:1px solid #b2b2b2;height:24px; line-height:24px;font-size:12px}
+.wendao_search_qa .wendao_searchbtnz_qa{width:74px;height:27px;cursor:pointer; margin-top:10px;background:url(../images/wendao_qabtn.png) no-repeat;}
+.qestion_btn_qa{height:28px; line-height:28px; display:inline-block; padding-top:5px; font-size:12px;}
+.other_qa{border-top:1px solid #E3E3E3; margin-top:10px;}
+.other_qa h4{font-size:12px; font-weight:bold; padding-top:10px; line-height:24px;}
+.other_qa li{line-height:22px; padding-left:10px; background:url(../images/dotted.png) 3px 10px no-repeat;}
+/**song-2012-09-24*********/
+.basic-condition{margin-top:10px;border-bottom:0;}
+.basic-condition dd,.basic-condition dt{padding-top:0;}
+.basic-condition dd{width:306px;}
+.basic-condition .wid540{width:540px;}
+.apply_box,.basic-condition .apply_box{width:500px;padding:10px 0 0 10px;}
+.applying-btn{width:90px;height:28px;display:inline-block;background:url(../images/button_sprites.png) -340px 0 no-repeat;}
+.applying-btn:hover{background-position:-340px -32px;}
+.applying-btn:active{background-position:-340px -63px;}
+.company-introduction .small-title{padding-top:20px;}
+.company-introduction .apply_box{padding-left:0;}
+.company-mapbox1{float:right;padding-top:10px;}
+.company-introduction ol{list-style:decimal; padding-left:2em}
+.company-introduction ul{list-style:disc; padding-left:2em}
+.company-introduction strong{font-weight:bold;}
+.company-introduction h1,.company-introduction h2,.company-introduction h3,.company-introduction h4,.company-introduction h5,.company-introduction h6{font-weight:bold; font-size:14px;}
+/*终端页的公司介绍*/
+#comp-contact dd{padding-left:10px;}
+#comp-introd{font-size:12px;color:#999;}
+#comp-introd{padding-left:20px;}
+#comp-introd h4,#comp-introd h4 a{font-size:14px;font-weight:bold;color:#315aaa;}
+#comp-introd p{line-height:20px;}
+#comp-introd h5{font-size:12px; font-weight:normal;}
+#comp-introd h5 span{padding-right:30px;color:#333;background:url(../images/small_l.png) right no-repeat;}
+/**搜索无结果**/
+.main2{margin:0 auto;padding:0;width:990px;font-size:12px;background-color:#f7f7f7;}
+.currentsearch{margin-top:10px;font-size:14px;line-height:24px;height:24px;border-bottom:2px solid #c3c3c3;color:#555;padding:0 5px;}
+.currentsearch span{float:right;font-size:12px;*margin-top:-24px;}
+.currentsearch span em{font-weight:bold;}
+.left-box2{float:left;width:870px;padding-top:18px;background:url(../images/left2top.png) top no-repeat;}
+.left-box2mid{background:url(../images/left2mid.png) top repeat-y;height:430px;}
+.no-resulte-warning{width:380px;height:110px;margin:0 auto;padding-top:20px;background:url(../images/warningbg.png) top right no-repeat;}
+.no-resulte-warning p{background:url(../images/warningicon.png) left bottom no-repeat;font-size:14px;color:#555;padding-top:10px;text-align:center;line-height:30px;}
+.no-resulte-warning p strong{font-weight:bold;font-size:16px;}
+.noresulteline{text-align:center;}
+.ecommended-posts{width:670px;margin:0 auto;padding:18px 0 0 60px;}
+.ecommended-posts li{float:left;width:315px;height:22px;line-height:22px;overflow:hidden;background:url(../images/dotted.png) left no-repeat;padding-left:10px;}
+.ecommended-posts li.clearfix{float:none;background:none;}
+.left-box2bot{background:url(../images/left2bot.png) bottom no-repeat;height:16px;overflow:hidden;}
+.right-box2{width:120px;float:right;overflow:hidden;background:#f7f7f7;}
+ul.other_do{padding-left:5px;margin-top:10px;width:110px;}
+.no-resulte-adv li{padding-bottom:10px;height:52px;overflow:hidden;}
+.no-resulte-adv img{border:1px solid #cccccc;display:block;}
+/***地图搜索luck***/
+.searchMap{margin-top:10px;}
+.searchMapImg{width:988px;height:658px;border:1px solid #CCC;background:url(../images/searchMap.png) right no-repeat; margin-bottom:10px;}
+.topLocation{width:988px; border:1px solid #CCC; margin-bottom:10px; border-radius: 3px;}
+.topLocationTitle{width:956px; height:33px; line-height:33px; padding-left:30px; background-color:#F7F7F7; color:#555; font-weight:bold; margin:1px;}
+.topLocationMain{width:988px;}
+.topLocationCity{width:928px; padding:0 30px; height:30px; line-height:30px; color:#555;}
+.topLocationMain ul{width:928px; padding:3px 30px;}
+.clearfix{clear:both;}
+.clearfix:after, .clearfix:before{content: ".";display: block;height: 0;clear:both;visibility: hidden;}
+.topLocationMain ul li{width:67px; height:22px; line-height:22px; float:left; font-size:12px; padding-right:10px; overflow:hidden; text-align:left;}
+.subway{width:928px; padding:3px 30px;}
+.subwayLeft{width:77px; line-height:22px; float:left; font-weight:bold; color:#555; font-size:12px;}
+.subwayRight{width:851px; float:left;}
+.subwayRight ul{width:851px; padding:0;}
+.subwayRight ul li{width:84px; height:22px; line-height:22px; overflow:hidden;}
+/***弹层样式***/
+.btnGoAskLayer{width:504px; margin:0 5px; border-bottom:1px dashed #ccc;}
+.askLayerBody{width:447px; margin:auto; padding:20px 0;}
+.askLayerInput,.askLayerTextarea{width:447px; height:25px; line-height:25px; margin-bottom:25px;}
+.askLayerInput input{width:435px; height:23px; line-height:23px; border:1px solid #ccc; padding-left:10px; color:#ccc; font-size:12px;}
+.askLayerTextarea{height:50px;}
+.askLayerTextarea textarea{width:435px; height:48px; line-height:23px; border:1px solid #ccc; padding-left:10px; color:#ccc; font-size:12px;}
+.tip-x-validate-error{background: url("http://my.zhaopin.com/template/my2011/images/new_v5/resume_tipsicon.jpg") no-repeat; color: #990100; height: 20px; line-height: 20px; padding-left: 19px;font-size:12px;}
+/**地图搜索结果**/
+.mapsearch-box{text-align:center;height:483px;padding-top:10px;overflow:hidden;}
+.search-left-nav{width:149px;overflow:hidden;float:left;}
+.search-left-navtop{height:19px;overflow:hidden;background:url(../images/leftnavtop.png) top no-repeat;}
+.search-left-navbot{height:17px;overflow:hidden;background:url(../images/leftnavbot.png) top no-repeat;}
+.search-left-navmid{background:url(../images/leftnavmid.png) top repeat-y;width:120px;padding:0 14px 0 15px;}
+.search-left-navmid h4{height:32px;border-bottom:1px solid #d3def4;color:#555;font-size:14px;padding-top:10px;line-height:32px;}
+.search-left-navmid dt{font-weight:bold;color:#999;line-height:24px;border-bottom:1px solid #c5d5ec;cursor:pointer;}
+.search-left-navmid dt a,.search-left-navmid dt .togslidown{font-weight:bold;color:#999;line-height:18px;background:url(../images/togslidown.png) 0 15px no-repeat;cursor:pointer;display:block;padding:10px 0 0 15px;}
+.search-left-navmid dt a:hover{text-decoration:none;}
+.search-left-navmid dt .togsliup{background:url(../images/togslidup.png) 4px 14px no-repeat;}
+.search-left-navmid dt:hover{background:url(../images/leftnavhover.png) bottom repeat-x;}
+.search-left-navmid dt em{float:right;margin-top:-22px;color:#769BC5;visibility:hidden;}
+.search-left-navmid dt em a{background:none;padding:4px 0 0 0;color:#769BC5;font-weight:normal;}
+.search-left-navmid dt em .togsliup{background:none;}
+.search-left-navmid dt em a:hover{text-decoration:underline;}
+.search-left-navmid dd{line-height:18px;padding-top:5px;}
+.search-left-navmid dd dd{padding-top:5px;}
+.search-left-navmid dd span{color:#999;}
+.search-left-navmid dd a.more{color:#769bc5;}
+.search-left-navmid dd.more_ddlist{display:none;padding-top:0;}
+.search-left-navmid dd.current{font-weight:bold;}
+/**地铁线路修改 song 20120611**/
+.search-left-navmid dd.sub_ways a{padding-right:20px;background:url(../images/togslidup.png) right no-repeat;}
+.search-left-navmid dd.sub_ways a.togsliup{background:url(../images/togslidown.png) right no-repeat;}
+.search-left-navmid dd.sub_ways_nav{height:144px;overflow-y:scroll;border:1px solid #C5D5EC;background-color:#fff;}
+.search-left-navmid dd.sub_ways_nav li{line-height:18px;padding-left:5px;}
+.search-mapcont-list{width:718px;float:left;margin-left:-1px;}
+.list-heads{line-height:30px;color:#555555;padding:20px 0 10px 20px;background:url(../images/listhead.png) left top no-repeat;}
+.list-heads a{display:inline-block;padding-left:16px;color:#999;margin:0 6px;background:url(../images/icon_sprites.png) 0 0 no-repeat;}
+.list-heads a:hover{color:#315aaa;}
+.list-heads a.modeof1{background-position:0 -290px;}
+.list-heads a.modeof1current,.list-heads a.modeof1:hover{background-position:-1px 6px;}
+.list-heads a.modeof2{background-position:0 -150px;}
+.list-heads a.modeof2current,.list-heads a.modeof2:hover{background-position:0 -336px;}
+.list-heads a.modeof3{background-position:0 -172px;}
+.list-heads a.modeof3current,.list-heads a.modeof3:hover{background-position:0 -313px;}
+.list-heads a.modeof4{background-position:0 -220px;}
+.list-heads a.modeof4current,.list-heads a.modeof4:hover{background-position:0 -195px;}
+.list-heads a.modeof5{background-position:0 -267px;}
+.list-heads a.modeof5current,.list-heads a.modeof5:hover{background-position:0 -243px;}
+.list-heads a.modeof4:hover,.list-heads a.modeof5:hover{text-decoration:none;}
+.list-heads a.modeof1current,.list-heads a.modeof2current,
+.list-heads a.modeof3current{font-weight:bold;color:#315aaa;}
+.list-heads span{float:right;*margin-top:-40px;padding-right:10px;line-height:30px;*line-height:30px;}
+.search-result-cont{background:url(../images/resultelistbg.png) top repeat-y;padding:5px 5px 0 10px;}
+.search-result-tab{background:url(../images/dottedline.png) bottom repeat-x #fff;border:1px dotted #fff;width:692px;}
+.search-result-tab:hover{background:none #f6fbff;border:1px solid #eaf0f8;}
+.search-result-tab .showTR,.search-result-tab .hideTr{}
+.search-result-tabth{background:url(../images/resultelisthead.png) 0 20px no-repeat;}
+.search-result-tabth th{height:30px;text-align:left;padding-left:10px;}
+.search-result-tab td{line-height:20px;padding:10px 0 3px 10px;_padding-bottom:10px;}
+.search-result-tabth .tabCol1,.Jobname{width:270px; color:#000;}
+.search-result-tabth .tabCol2,.Companyname{width:201px; color:#000;}
+.search-result-tabth .tabCol3,.Companyaddress{width:92px; color:#000;}
+.search-result-tabth .tabCol4,.releasetime{width:55px; color:#000;}
+.search-result-tabth .tabCol5,.showTR-btn{width:23px;}
+.search-result-tab .Jobname{font-weight:bold;}
+.search-result-tab .Jobname a{/*display:inline-block;*/width:230px;overflow:hidden;}
+.search-result-tab .Jobname a img{display:inline-block;vertical-align:middle}
+.search-result-tab .Jobname a:link{color:#315aaa}
+.search-result-tab .Jobname a:visited{color:#660033}
+.search-result-tab .Jobname a:hover{color:#315aaa}
+.search-result-tab .Jobname a:active{color:#315aaa}
+.search-result-tab .Jobname input{width:15px;height:15px;vertical-align:top;margin-right:5px;display:inline-block;margin-top:2px;}
+.search-result-tab .Companyname a{display:inline-block;width:180px;overflow:hidden;}
+.search-result-tab .Companyname a:link{color:#000000;}
+.search-result-tab .Companyname a:visited{color:#996666;}
+.search-result-tab .Companyname a:hover{color:#315aaa;}
+.search-result-tab .Companyname a:active{color:#769bc5;}
+.search-result-tab .releasetime{text-align:center;}
+.search-result-tab .hideTr{display:none;}
+.search-result-tab .hideTr td{padding:0 0 5px 0;}
+.search-result-infotab .tabCol1{width:536px;line-height:20px;text-indent:0;}
+.search-result-tab .search-result-infotab .tabCol1{width:540px;padding:0 10px 5px 25px; word-wrap:break-word;}
+.search-result-tab .search-result-infotab .tabCol2{width:125px;text-align:center;}
+.search-result-infotab .tabCol1 span{color:#999;padding-right:20px;display:inline-block;}
+.search-result-infotab .tabCol1 p{color:#555;}
+.search-result-infotab .tabCol2{text-align:center;line-height:30px;width:122px;}
+.search-result-tab .hideTr:hover .tabCol2{}
+.ordering-btn{display:inline-block;width:103px;height:27px;background:url(../images/button_sprites.png) -112px -97px no-repeat;}
+.ordering-btn:hover{background-position:-112px -129px;}
+.ordering-btn:active{background-position:-112px -161px;}
+.ordering-btn img{visibility:hidden;}
+.Collection{background:url(../images/icon_sprites.png) 0 -361px no-repeat;padding:4px 0 0 15px;*background-position:0 -363px;}
+.search-result-tab .showTR-btn a{background:url(../images/listsligdown.png) left no-repeat;display:inline-block;width:16px;height:16px;}
+.search-result-tab .showTR-btn a.showTR-up-btn{background:url(../images/listsligdup.png) left no-repeat;}
+.showTR-btn a:hover{text-decoration:none;}
+.applay-select{background-color:#f1f1f1;padding-top:10px;width:714px;height:43px;background:url(../images/applayselectbottom.png) left bottom no-repeat;}
+.applay-All{float:left;padding-left:21px;}
+.applay-All label{color:#315aaa;}
+.applay-All label input{vertical-align:-2px;width:15px;margin-right:5px;}
+.selectall-btn,.Collection-btn{width:103px;height:28px;margin:0 5px;overflow:hidden;}
+.selectall-btn{background:url(../images/button_sprites.png) -223px 0 no-repeat;}
+.selectall-btn:hover{background-position:-223px -29px;}
+.selectall-btn:active{background-position:-223px -59px;}
+.Collection-btn{background:url(../images/button_sprites.png) -223px -96px no-repeat;}
+.Collection-btn:hover{background-position:-223px -126px;}
+.Collection-btn:active{background-position:-223px -156px;}
+.pagesDown{float:right;height:40px; padding:10px 10px 0 2px;}
+.pagesDown li{float:left; margin-left:-1px;}
+.pagesDown li a{display:inline-block;border:1px solid #cecece;padding:0 7px;height:26px;line-height:26px; color:#315aaa; font-size:14px; font-family:arial;}
+.pagesDown li a:hover{text-decoration:none; background-color:#d7dce3;}
+.pagesDown li a.current{background-color:#769bc5;color:#fff;border:1px solid #cecece;}
+.pagesDown li a.pre-page,.pagesDown li a.next-page{width:55px;height:26px;color:#315aaa;padding:0;text-align:center;line-height:26px;}
+.pagesDown li a.pre-page{margin-right:5px; padding-left:14px; background:url(../images/previcon.gif) 9px 9px no-repeat;}
+.pagesDown li a.next-page{margin-left:5px; padding-right:14px; background:url(../images/nexticon.gif) 56px 9px no-repeat;}
+.pagesDown li a.pre-page:hover,.pagesDown li a.next-page:hover{background-color:#d7dce3;}
+.pagesDown li .pagesmore{border:0; height:28px;}
+.pagesDown li.clearfix{float:none;}
+.pagesDown li.pagesDown-pos{position:relative;top:0;left:0;}
+.nextpagego-box{height:28px; overflow:hidden; padding-left:10px; color:#000; line-height:26px; position:relative; width:112px;}
+.nextpagego-box input{width:32px;height:18px; line-height:18px; padding:4px 0;border:1px solid #769bc5;margin:0 4px; font-size:14px; position:absolute; top:0; left:22px; text-align:center; background-color:#F7F7F7;}
+.nextpagego-btn{width:38px;height:28px;background:url(../images/Determine0320.png) top no-repeat;margin-left:5px; position:absolute; top:0; right:0;}
+.nextpagego-box .redbg{background-color:#faaaaa;}
+.pagesDown li a.nopress,.pagesDown li a.nopress2{color:#999; cursor:default;}
+.pagesDown li a.nopress:hover,.pagesDown li a.nopress2:hover{background-color:#F7F7F7;}
+.pagesDown li a.nopress{background:url(../images/previcon_dis.gif) 9px 9px no-repeat;}
+.pagesDown li a.nopress2{background:url(../images/nexticon_dis.gif) 56px 9px no-repeat;}
+.interested-thing{border:1px solid #cccccc;background-color:#fff;padding:1px;width:708px;margin-top:10px;}
+.interested-thing h4{background-color:#f1f1f1;font-size:15px;font-weight:bold;color:#555;line-height:32px;padding-left:10px;margin-bottom:5px;}
+.interested-thing li{background:url(../images/dotted.png) 12px 8px no-repeat;line-height:21px;padding:0 20px 10px 20px;}
+.interested-thing li a{margin-right:25px;display:inline-block;}
+/**全都展开的列表**/
+.search-result-tabF{background:url(../images/showTrFbg.png) bottom center no-repeat;border:1px solid #fff;}
+.search-result-tabF .tabCol6{width:622px;font-size:14px;padding-top:10px;}
+.search-result-tabF .tabCol7{width:70px;text-align:center;padding-top:10px;}
+.search-result-tabF .Jobname input{}
+.search-result-tabF .Jobname a{width:600px;}
+.search-result-tabF .showTR,.search-result-tabF .showTrF{background:none;}
+.search-result-tabF .showTrF{}
+.search-result-tabF td{padding:0;}
+.search-result-tabF .showTrF td{padding:5px 0;}
+.search-result-tabF .Companyname{font-size:12px;color:#769bc5;text-indent:20px;}
+.search-result-tabF .Companyname a{width:600px;display:inline;text-indent:10px;}
+.search-result-tabF .search-result-infotab .tabCol1{width:555px;padding:5px 20px;padding:5px 10px\9;*padding:5px 10px;}
+.search-result-tabF .search-result-infotab .tabCol1 p{color:#555;}
+.search-result-tabF .search-result-infotab .tabCol2{width:105px;visibility:hidden;_visibility:visible;}
+.search-result-tabF:hover{background:none #f6fbff;border:1px solid #eaf0f8;}
+.search-result-tabF:hover .showTrF .tabCol2{visibility:visible;}
+/**公司内搜索**/
+.search-result-tabth-comp{background:url(../images/resultelisthead2.png) bottom center no-repeat;}
+.search-result-tabth-comp .tabCol1,.search-result-tab-comp .Jobname{width:426px;}
+.search-result-tabth-comp .tabCol3,.search-result-tab-comp .Companyaddress{width:150px;}
+.search-result-tabth-comp .tabCol4,.search-result-tab-comp .releasetime{width:54px;}
+.search-result-tabth-comp .tabCol5,.search-result-tab-comp .showTR-btn{width:22px;}
+.company-introduce{border:1px solid #e2e2e2;margin-top:10px;padding:15px 20px;font-size:12px;}
+.company-introduce dd{padding-left:135px;line-height:24px;color:#555;}
+.company_logo{float:left;height:98px;}
+.company-introduce .company_name{font-size:15px;font-weight:bold;color:#315aaa;line-height:20px;padding-bottom:5px;}
+.company_name a{color:#315aaa;}
+.company-introduce dd span{color:#999;}
+/**公司 职位 终端页 底部搜索**/
+.Search-bottom-box{width:990px;margin:10px auto;}
+#searchForm .industry-margLeft,#searchForm .keyword-margLeft,#searchForm .job-margLeft,#searchForm .city-margLeft,#searchForm .searchbtn-margLeft{height:28px;padding:13px 0 16px 0;}
+#searchForm .industry-margLeft{margin-left:10px;}
+#searchForm .keyword-margLeft{width:215px;}
+#searchForm .keyword-margLeft input{width:200px;}
+#searchForm .searchbtn-margLeft{width:110px;margin-left:10px;padding:9px 0 0 0;}
+#searchForm .city-margLeft,#searchForm .city-margLeft:hover{background:url(../images/search_city_bott.png) center no-repeat;width:155px;padding-top:10px;}
+#searchForm .city-margLeft input{margin-top:3px;width:75px;}
+#searchForm .searchbtn-margLeft .doSearch{background:url(../images/index.png) 0 -61px no-repeat;width:109px;height:28px;overflow:hidden;}
+#searchForm .searchbtn-margLeft .doSearch:hover{background:url(../images/index.png) 0 -186px no-repeat;}
+/*一对多职位推荐*/
+.list-producing{background:url(../images/producingbg.png) repeat-x;height:42px;line-height:42px;padding-left:50px;font-size:14px;color:#555;}
+.list-producing h3{background:url(../images/producingicon.png) left no-repeat;padding-left:30px;}
+.list-producing h3 span,.list-producing h3 span a{color:#315aaa;font-weight:bold;}
+.applay-selectnobg{background:#f8f8f7;width:963px;padding-left:25px;}
+.applay-selectnobg2{background:none;border-bottom:1px solid #cacaca;height:40px;}
+.applay-selectnobg .applay-All,.applay-selectnobg .pagesDown{float:left;width:410px;}
+.applay-selectnobg .pagesDown li a{background-color:#eef6ff;border:1px solid #bdc8e0;height:20px;width:20px;text-align:center;line-height:20px;padding:0;margin:0 3px;}
+.applay-selectnobg .pagesDown li a.current{border-color:#a1a1a1;background-color:#bbbbbb;}
+.information-out{height:60px;overflow:hidden;display:inline;float:left;}
+.ifout-btn{float:left;}
+/**职位推荐**/
+.main5{width:950px;margin:20px auto 0 auto;overflow:hidden;}
+.push-box dl{border-bottom:1px dotted #999999;}
+.dlJobname{font-size:14px;font-weight:bold;padding:10px 0 0 0px;line-height:24px;position:relative;}
+.dlJobname a:visited{color:#660033;}
+.dlJobname a:hover{color:#315aaa;}
+.dlJobname input{width:15px;margin:0 15px 0 50px;vertical-align:-1px;}
+.dlCompanyname{line-height:16px;padding-left:80px;height:16px;overflow:hidden;}
+.dlCompanyname a:visited{color:#996666;}
+.dlCompanyname a,.dlCompanyname a:hover{color:#769BC5;}
+.search-result-infobox{padding:10px 0;}
+.dlapply-btn-box{float:right;width:105px;height:55px;overflow:hidden;text-align:center;padding:10px 180px 0 25px;visibility:hidden;_visibility:visible;}
+.information-box{float:left;width:540px;padding-left:80px;color:#555;line-height:21px;}
+.information-box-reviw{color:#999;}
+.information-box-reviw span{margin-right:20px;color:#555;}
+.dlapply-btn-box .Collection{display:inline-block;width:50px;margin-top:5px;}
+.push-box dl:hover{background-color:#f6fbff;/*f3faff*/}
+.push-box dl:hover .dlapply-btn-box{visibility:visible}
+.dlapplay-all{padding-left:25px;}
+.dlapplay-all label input{margin-right:15px;}
+.dlapplay-all .selectall-btn{margin-left:15px;}
+.infor-long-box{display:none;}
+.applay-selectnobg .pagesDown li{font-weight:bold;}
+#footerdl{margin-top:50px;}
+#footerdl .link{width:990px;}
+.producingNoR{height:20px;line-height:20px;padding:130px 0;text-align:center;color:#555;}
+.producingNoR a{text-decoration:underline;font-size:14px;}
+/**职位推荐2.1 申请成功推荐**/
+.success-applay{height:80px;border:1px solid #ffd392;background:url(../images/success_api.png) 100px 37px no-repeat #fff3dc;padding:35px 0 0 160px;color:#555;line-height:24px;color:#000;}
+.success-applay span{font-size:14px;color:#ff0000;padding-right:20px;}
+.dlJobname .look-percent{width:60px;height:50px;position:absolute;top:13px;left:73px;color:#fff;font-weight:normal;background:url(../images/look_percent.png) no-repeat;text-align:center;font-family:Tahoma;line-height:18px;}
+.dlJobname .look-percent span{font-size:20px;font-family:Tahoma;line-height:26px;}
+.push-box-under,.push-box2-1{border-bottom:2px solid #CACACA;}
+.push-box2-1 .dlCompanyname,.push-box2-1 .information-box{padding-left:145px;}
+.push-box2-1 .dlJobname input{margin-right:80px;}
+.push-box2-1 .dlapply-btn-box{padding-right:120px;}
+.applay-selectfix-box{height:65px;}
+.applay-selectfix{position:fixed;bottom:0;background:#ededed;width:925px;padding:15px 0 0 25px;height:50px;}
+.list-applaying{border-bottom:2px solid #cacaca;background:url(../images/applayiconbg.png) bottom repeat-x;height:50px;padding-left:40px;font-size:14px;color:#555;margin-top:10px;}
+.list-applaying h3{background:url(../images/applayicon.png) 0 20px no-repeat;padding:15px 0 0 30px;line-height:35px;}
+.list-applaying .applayicon2{background:url(../images/applayicon2.png) 0 22px no-repeat;}
+.list-applaying h3 span{font-weight:bold;}
+.returnTop{float:right;padding:0px 20px 0 0;}
+.returnTop a{display:inline-block;background:url(../images/returntop.png) 10px 0 no-repeat;text-align:center;padding-top:22px;line-height:24px;}
+.returnTop a:hover{background-position:-39px 0;}
+.loadingMore{padding:10px 0 0 0;text-align:center;height:30px;margin-top:-2px;background:#fff;}
+/**search result shen qing tan ceng**/
+.popupApply #loginBlock .textInput{border:1px solid #afb1b3;background:none;}
+#hd2011globalNav{width:747px; float:right;}
+#hd2011cityMoreBox{margin-left:340px;*margin-left:132px;}
+/**songzhihua 2013-03-13**/
+.publish-time{padding-right:10px;color:#999;}
+.publish-content ul{display:none;}
+.publish-content .showout{display:block;}
+.publish-content li{line-height:28px;}
+.job-recommend{width:960px;margin:20px auto;}
+#job-recommend{width:960px;margin:30px auto 0 auto;}
+#job-recommend h3{background:#edf6ff;line-height:30px;padding:0 10px;font-weight:bold;color:#535353;}
+#job-recommend h3 a:link{color:#535353}
+#job-recommend li{float:left;width:230px;line-height:36px;padding-left:10px;}
+/*hot-position*/
+.hot-position{width:994px;border:1px solid #ddd;margin:23px 0 16px 0;}
+.hot-position h3 { height:40px;line-height:40px; background:#F2F2F2;font-size:15px;width:979px; padding-left:15px;color:#333;font-weight:bold;margin-bottom:8px;}
+.hot-position table{ margin:0 15px;}
+.hot-position td a { font-size:14px; font-family:"微软雅黑";line-height:24px;color:#3399FF;}
+/*满意度调查*/
+.satsurvey{font-size:12px;color:#555555;line-height:24px;padding:16px 0 14px 10px;}
+.satsurvey input {cursor:pointer;color:#404040;width:67px;line-height:26px;height:26px;background:url(http://img00.zhaopin.cn/2012/other/search/images/satsurvey_input.png) no-repeat;margin-right:12px;display:inline-block;}
+.result {display:none;background:url(http://img00.zhaopin.cn/2012/other/search/images/satisfied.png) no-repeat 12px 10px;line-height:16px;padding:10px 0 20px 38px;font-size:12px;color:#000;}
+.content{display:none;width:271px;font-size:14px;color:#666666;background:#fff;border:1px solid #a0a0a0;padding:10px 0 0 15px;}
+.content textarea {resize:none;width:253px;height:72px;background:none;border:1px solid #a5acb2;}
+.content .title {line-height:28px;}
+.content .title .close {width:26px;height:19px;background:url(http://img00.zhaopin.cn/2012/other/search/images/Close.gif) no-repeat;float:right;cursor:pointer;}
+.content .confirm {cursor:pointer;font-size:12px;color:#990000;display:block;margin:10px auto 24px;width:88px;height:29px;border:none;background: url("http://img02.zhaopin.cn/2012/img/ui/popup_bg.png") no-repeat 0 -87px;}
+.content .confirm:hover {background-position:0 0;cursor:pointer;}
+.contentTip{display:none;position:fixed;_position:absolute;left:50%;margin-left:-140px;top:200px;_top:expression(eval(document.documentElement.scrollTop)+266);}
+/*_top:expression(eval(document.documentElement.scrollTop))+266*/
+/*推荐相似职位*/
+div,ul,li,h2 {padding:0;margin:0;}
+.clearfix {clear:both;}
+.recommendPosition {margin:0 atuo;width:988px;line-height:38px;-moz-border-radius:3px;border-radius:3px;border:1px solid #c5d5ec;}
+.recommendPosition h2 {color:#333;font-size:12px;font-weight:bold;float:left;width:137px;padding:0 0 0 17px;background:url(http://img00.zhaopin.cn/2012/img/rd/rocomPoint.png) no-repeat right top #f6fbff;}
+.recommendPosition ul{float:left;line-height:38px;}
+.recommendPosition ul li{background:url(http://img00.zhaopin.cn/2012/img/rd/rocomTopli.png) no-repeat right center;float:left;list-style:none;line-height:38px;height:38px;max-width:188px;padding:0 10px;}
+.recommendPosition .recomCon {cursor:pointer;text-decoration:none;float:left;color:#315aaa;font-size:12px;font-weight:bold;max-width:146px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;display:inline-block;}
+.recommendPosition .recomCon:hover {text-decoration:underline;}
+.recommendPosition .recomCon:visited {text-decoration:none;color:#660033;}
+.recommendPosition .recomNum {color:#bcbcbc;font-size:10px;display:inline-block;float:left;}
+.recommendPositionBottom {border:1px solid #cecece;-moz-border-radius:3px;border-radius:3px;width:856px;margin:0 0 0 6px;}
+.recommendPositionBottom .title{color:#333;font-size:12px;font-weight:bold;width:81px;padding:0 0 0 17px;background:#f1f1f1;}
+.recommendPositionBottom ul{float:left;line-height:38px;width:758px;}
+.recommendPositionBottom ul li{background:url(http://img00.zhaopin.cn/2012/img/rd/rocomBotli.png) no-repeat right center;float:left;list-style:none;line-height:38px;height:38px;padding:0 10px 0 5px;}
+.recommendPositionBottom .recomCon {white-space:nowrap;cursor:pointer;text-decoration:none;float:left;color:#315aaa;font-size:12px;font-weight:bold;display:inline-block;}
+.recommendPositionBottom .recomCon:hover {text-decoration:underline;}
+.recommendPositionBottom .recomCon:visited {text-decoration:underline;color:#660033;}
+.recommendPositionBottom .recomNum {color:#bcbcbc;font-size:10px;display:inline-block;float:left;}
+.recommendPosition ul .backnone,.recommendPositionBottom ul .backnone {background:none;}
+.hasresult{margin:0;width:708px;}
+.hasresult ul{width:626px;}
+.backnone {background:none;}
+/*20140317*/
+.search-result-tab .Jobname a.add-width{vertical-align:middle;}
+.search-result-tab .Jobname .add-span{ float:left; margin-top:-2px; width:230px;}
+
+/*20140729*/
+.sou_tips01 td,.sou_tips02 td{ width:690px; height:32px; font-size:14px; color:#333; line-height:32px; background:#FFF6D4; border:1px solid #FFCB08; padding:0;}
+.sou_tips01 i,.sou_tips02 i{ display:inline-block;background:url(http://img00.zhaopin.cn/2014/sou/img/sou_ico.png) no-repeat; width:16px; height:17px; vertical-align:middle; margin:0 10px;}
+.sou_tips02 i{ background-position:left -19px;}
+
+
+
+/*2014-8-7搜索首页修改*/
+.cleared{ clear:both;zoom:1;height:0;font-size: 1px;line-height: 0px;text-indent:-9999px;}
+.clearfixed:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfixed {zoom:1;display:block;}
+.search_topcontent{width:990px;margin:0 auto;border:1px solid #DDD;margin-bottom:10px;}
+.search_topcontent h1{font-size:15px;font-family:"微软雅黑";color:#333;height:38px;line-height:38px;padding-left:17px;background:#f2f2f2}
+.search_topcontent .search_topcontent_main{padding:10px 0 10px 17px}
+.search_topcontent a{display:block;width:158px;float:left;color:#315aaa;font-size:14px;font-family:"微软雅黑";line-height:28px}
+.search_topcontent a:hover{text-decoration:underline}
+.search_content{width:990px;margin:0 auto;border-left:1px solid #DDD;;border-bottom:1px solid #DDD;;border-right:1px solid #DDD;;border-top:4px solid #417fd6;}
+.search_left_bg{background: url(http://img02.zhaopin.cn/2014/sou/img/search_indeimg.jpg) repeat-y left 0}
+.search_left{width:190px;float:left;}
+.search_left li {line-height:45px;padding-left:21px;border-bottom:1px solid #DDD;border-right:1px solid #DDD;background:#F2F2F2}
+.search_left li a{font-size:15px;color:#333;display:block;line-height:45px;background:url(http://img02.zhaopin.cn/2014/sou/img/u33_end.png) no-repeat 147px center;height:45px;font-family:"微软雅黑"}
+.search_left li a:hover{background:url(http://img02.zhaopin.cn/2014/sou/img/u45_end.png) no-repeat 147px center}
+.search_right{width:760px;float:left;margin-left:20px}
+.search_right div p{padding-top:13px;padding-bottom:10px;font-weight:bold;}
+.search_right div p a{font-size:12px;color:#333;font-family:"微软雅黑";}
+.search_right div div a{width:152px;float:left;line-height:25px;color:#315aaa;display:block;font-family:"微软雅黑"}
+.search_right div div a:hover{ text-decoration:underline}
+
+.search_bottom_content{border-top:1px solid #DDD }
+.search_bottom_content div{width:940px;margin:0 auto;border-bottom:1px solid #DDD;padding-bottom:17px}
+.search_bottom_content p{width:167px;float:left;padding-top:17px;font-family:"微软雅黑"}
+.search_bottom_content p a{color:#333;font-size:16px;font-family:"微软雅黑"}
+.search_bottom_content p a:hover{color:#F00}
+.search_bottom_content h1{width:760px;float:left;padding-top:17px;margin-left:10px}
+.search_bottom_content h1 a{margin-right:26px;color:#333;line-height:20px;font-family:"微软雅黑";font-weight:normal;display:inline-block}
+.search_bottom_content h1 a:hover{color:#F00}
+
+.wechat {
+  width: 120px;
+  height: 220px;
+  cursor: pointer;
+  position: fixed;
+  margin-left: -125px;
+  top: 230px;
+  _position: absolute;
+  _left: -0.1%;
+  _top: expression(documentElement.scrollTop+150);
+}

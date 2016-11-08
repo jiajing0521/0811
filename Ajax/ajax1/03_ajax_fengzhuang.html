@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form action="">-->
+用户名: <input type="text" id="username">
+密码: <input type="text" id="password">
+<button id="login">登录</button>
+<!--</form>-->
+<div id="show">请登录</div>
+
+<script type="text/javascript" src="ajax.js"></script>
+<script type="text/javascript">
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+    var login = document.getElementById("login");
+    var show = document.getElementById("show");
+
+    login.onclick = function () {
+        ajax("get","1.php",{
+            username:username.value,
+            password:password.value
+        },function (data) {
+            console.log(data);
+            if (data == 0){
+                show.innerHTML = "用户名或密码错误";
+            }else{
+                show.innerHTML = "欢迎登录";
+            }
+        })
+    }
+</script>
+</body>
+</html>

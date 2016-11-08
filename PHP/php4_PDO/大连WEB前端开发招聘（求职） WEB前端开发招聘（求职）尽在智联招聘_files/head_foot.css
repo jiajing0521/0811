@@ -1,0 +1,39 @@
+body{margin:0px;padding:0px;}
+/*公共头部*/
+.all_headcontainer{width:100%;height:78px;}
+.all_common{font-family:"Microsoft YaHei";font-size:12px;}
+.all_top{height:35px;line-height:35px;background:#fff;}
+.all_topcontent{width:990px;margin:0 auto;height:35px;clear:both;overflow:hidden;position:relative;}
+.all_topcontenter{float:right;height:35px;}
+.all_addDiv,.all_addMod{float: right;}
+.allhead_tel,.allhead_telcon,.allhead_phone,.allhead_phonecon{font-style:normal;}
+strong{font-weight:normal;font-style:normal;}
+.all_topcontenter a{text-decoration:none;}
+.allhead_postoffice{display:inline-block;width:94px;height:24px;line-height:24px;margin-right:20px;text-align:center;background:#fcd353;color:#6f2500;border-radius:3px;}
+.all_icon{display:inline-block;background:url('http://img01.zhaopin.cn/2014/head_foot/img/Allhead_icon.png') no-repeat;margin:0px 3px -1px 0px;*margin:0px 3px 3px 0px;}
+.allhead_tel{width:13px;height: 11px;background-position:-2px -2px;}
+.allhead_phone{width:7px;height: 11px;background-position:-18px -2px;}
+.allhead_gt{width: 6px;height: 10px;background-position:-28px -2px;margin-left:2px;}
+.allhead_telcon{font-family:"Microsoft YaHei";font-size:12px;color:#2e2e2e;margin-right:20px;}
+.allhead_phonecon,.allchoice_city{color:#414243;margin-right:20px;}
+.allhead_login,.allhead_regi{color:#414243;}
+.allhead_sep{display: inline-block;height: 11px;margin: 0px 7px -1px 8px;width: 1px;background: #414243;}
+.allhead_regi{margin-right:30px;}
+.all_nav{height:43px;line-height:43px;background:#689fee;}
+.all_navcontent{width:990px;margin:0 auto;height:43px;position:relative;}
+.allhead_img{position:absolute;top:-25px;width:160px;height:54px;float:left;}
+.allhead_img img{border:0 none;}
+.all_navlist,.all_navlist li{list-style:none;margin:0px;padding:0px;}
+.all_navlist{float:right;height:43px;margin-right:11px;}
+.all_navlist li{float:left;width:88px;text-align:center;}
+.all_navlist li a{text-decoration:none;display:inline-block;font-family:"Microsoft YaHei";color:#fff;font-size:14px;width:88px;}
+.all_navlist li a:hover,.allcurrent{background:#3f7dd5;}
+#personcheckout{margin-right: 30px;}
+#personname{max-width: 60px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;display: inline-block;float:left;width:60px\9;*width:60px;_width:60px;text-align: right;}
+#companyLogining{max-width: 130px;width:130px\9;overflow: hidden;*width:130px;_width:130px;}
+.companyLogining span,.companyLogining a{display: inline-block;float: left;}
+/*公共尾部*/
+.allfoot_link{position:relative;width:950px;margin:10px auto 0;padding-top:10px;border-top:3px solid #3F7BD3;color:#666666;}
+.allfoot_linkcon{font:12px/1.8em tahoma,simsun;text-align:center;}
+.allfoot_link a{text-decoration:none;color:#315AAA;}
+.foot_public{height:20px;line-height:20px;margin: 0 0 0 5px;color:#939393;}

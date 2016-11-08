@@ -1,0 +1,111 @@
+﻿/*powered by qu.yun 2014-04-26*/
+
+/*alert_box*/
+*html {/* 只有IE6支持 */
+    background-image: url(about:blank); /* 使用空背景 */
+    background-attachment: fixed; /* 固定背景 */
+}
+.div_02_main {position:absolute;right:410px;_position:static;_right: 0;z-index: 10;}
+.alert_box{ width:414px; min-height:300px; _height:300px; _overflow:auto;border:2px solid #3B75D2;  padding:0px 0px 0px 0px ;position:fixed;_right:0px;bottom:132px; background-color:#FFF;z-index: 10;_bottom: auto;_margin-bottom:100px; _position:absolute;_top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));}
+.alert_cont{  padding:10px 10px 2px 12px;}
+.al_tit01{width:315px; line-height:20px;}
+
+.alt_close01{ width:19px; height:19px; display:block; margin:3px  0px 0px 0px; cursor:pointer; background: url(../images/bg_alert.png) no-repeat 0px -16px; overflow:hidden;}
+.alt_close02{ width:11px; height:11px; position: absolute; top:4px; right:5px;  cursor:pointer;background: url(../images/bg_alert.png) no-repeat 0px 0px; overflow:hidden;}
+.btn_submit01{ width:88px; height:29px; display:block; background: url(../images/bg_alert.png) no-repeat 0px -40px; overflow:hidden; cursor:pointer;}
+
+.alt_select{ height:30px;}
+.box_select01{ width:290px; height:29px; line-height:29px;padding:3px 5px 3px 0px;}
+.line_bottom{ line-height:28px; height:28px; background: url(../images/line_bottom.png)  repeat-x 0px 27px; }
+.com_name_cont{}
+.com_name{ font-size:12px; position:relative;line-height:22px;_display:inline; _zoom:1;   padding:2px 18px 2px 5px; _padding:2px 18px 2px 5px;}
+.com_name_ul li{ margin-bottom:10px; }
+.com_name_ul li a{ text-decoration:none; display:inline-block;line-height:16px; }
+.com_name_ul li a:hover{ text-decoration:none; }
+.com_bg{background-color: #CECECE;}
+.com_font{ color:#000;}
+.clr{ clear:both;}
+
+/*global*/
+.font12{ font-size:12px;}
+.font14{ font-size:14px;}
+.f_nor{ font-weight:normal}
+.f_array01{ color:#999;}
+.f_red01{ color:red; }
+.f_number{ color:#315AAA; position:absolute; top:5px; left:18px;}
+.f_black{ color:#000;}
+.f_none{ text-decoration:none;}
+.f_none a:hover{ text-decoration:none;}
+
+.f_left{ float:left;}
+.f_right{ float:right;}
+.m_top5{ margin-top:5px;}
+.m_top10{ margin-top:10px;}
+.m_left3{ margin-left:3px;}
+.m_left5{ margin-left:5px;}
+.m_left10{ margin-left:10px;}
+.m_right5{ margin-right:5px;}
+.m_right10{ margin-right:10px;}
+.m_bottom15{ margin-bottom:15px;}
+.m_bottom10{ margin-bottom:10px;}
+.dsp_none{ display:none;}
+
+.line_ht16{ line-height:16px;}
+.line_ht18{ line-height:18px;}
+.line_ht20{ line-height:20px;}
+.line_ht22{ line-height:22px;}
+/*btn_right*/
+.div_01_main {position:absolute;right:-10px;_position:static;_right:0px }
+.btn_right_font{width:110px; height:82px; display:block; z-index:99;bottom:120px;_bottom: auto;_margin-bottom:100px;_right:-140px; position: fixed;_position:absolute;_top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));}
+
+.del_company{ position:relative; width:29px; height:40px;_width:29px; _height:40px; line-height:18px; _overflow:hidden;background: url(../images/btn_blue_01.png)  no-repeat 0px 0px;display:block; padding: 28px 11px 0; overflow:hidden; color:#FFF; text-decoration:none;}
+.del_company:hover{ _overflow:hidden;background: url(../images/btn_blue_01.png)  no-repeat -58px 0px;display:block; overflow:hidden; color:#FFF; text-decoration:none;}
+.back_top{width:29px; height:40px;_width:29px; _height:40px;line-height:18px; _overflow:hidden;background: url(../images/btn_blue_01.png)  no-repeat left -70px; display:block; padding:44px 11px 0;overflow:hidden;color:#FFF; text-decoration:none;}
+.back_top:hover{ _overflow:hidden;background: url(../images/btn_blue_01.png)  no-repeat -58px -70px;display:block;padding:44px 11px 0;overflow:hidden;color:#FFF; text-decoration:none;}
+
+/*currentsearch_new start*/
+.currentsearch_new{margin-top:10px;font-size:14px;line-height:24px;height:24px;border-bottom:2px solid #c3c3c3;color:#555;padding:0px 0px 5px 5px;}
+.currentsearch_new span{
+	/*font-size:12px;
+	*margin-top:-24px;*/
+}
+.currentsearch_new span em{
+	font-weight:bold;color:#F00;
+}
+.m_right20{ margin-right:20px;}
+.m_right25{ margin-right:25px;}
+.f_left{ float:left;}
+.f_right{ float:right;}
+.clr{ clear:both;}
+.ico_dy_new{ }
+.ico_dy_new i{ display:inline-block;}
+.ico_dy_new .dy_info{background:url(../images/ico_dy_new.png) no-repeat 0px 0px; width:15px; height:12px; margin:6px 3px 0px 0px ; }
+.ico_dy_new .dy_new{background:url(../images/ico_dy_new.png) no-repeat 0px -17px; width:18px; height:7px;margin:4px  0px 0px 2px;}
+/*currentsearch_new end*/
+
+/*add by for free resume beg*/
+.job_read_container{ width: 394px;height: 265px;padding:10px;border: 2px solid #3b75d2;display: none;position: absolute;background-color: #fff; z-index: 10; }
+.job_read_container i{height: 19px; width: 19px; background: url("../images/bookjob/bg_alert.png") no-repeat left -16px; display: inline-block;cursor: pointer; float:right; *margin-top:-27px;}
+.job_read_header{color: #999; font: 500 14px '宋体';padding-bottom: 5px; }
+.job_read_header .titile{color: #407dd6;font: 500  16px '微软雅黑';}
+.job_read_body{padding-top: 12px;width:394px;border: none}
+.job_read_body .send_rate{font:500 12px/20px "宋体";color: #000;}
+.job_read_body .send_rate input{vertical-align: middle;margin-bottom:2px;}
+.delay_close{font:500 14px "宋体";}
+.job_read_body_b{text-align: right;width: 75px;font:400 12px "宋体";float: left;vertical-align: middle;height:30px; line-height: 30px;padding-right:2px;color: #000000;}
+.delay_close_none{display: none;}
+.inputText1{border-color: #e4e4e4; }
+.inputText1 input, .input_submit{border: medium none;width: 235px;}
+.inputText1 img{height: 30px;width: 95px;}
+.content form div{padding: 0px;}
+.input_submit{width: 90px;height: 29px; margin : 20px 30px 0 80px; cursor:pointer; color: #990000;font:700 14px/29px "宋体";display:inline-block;text-align: center;background:url("../images/bookjob/button-back.png")  no-repeat;}
+.error_info{height: 27px;padding: 5px 0 0 80px;color: #ff794a;}
+.span_input{ display: inline-block;height:30px; line-height: 30px;border: 1px solid #E4E4E4;padding-left: 5px;}
+.ident_image{margin: 0 10px;*margin: 0 15px;_margin: 0 15px;width:96px;vertical-align: bottom;height: 32px;cursor: pointer; }
+.submit_waiting{width: 17px;height: 17px;margin-left:5px;vertical-align: middle;display: none;}
+.inputTexte{line-height:30px;height:30px;font-size:18px;border:1px solid #ff794a;background:url(http://my.zhaopin.com/images/new_v4/wrongicon.png) no-repeat 242px 8px ;}
+.inputTexte_indent{line-height:30px;height:30px;font-size:18px;border:1px solid #ff794a;background:url(http://my.zhaopin.com/images/new_v4/wrongicon.png) 130px 8px no-repeat;}
+.inputText1b{background:#fff;border: 1px solid #F1CA7F;line-height:30px;height:30px; font-size:18px;}
+.inputTexts{line-height:30px;height:30px;font-size:18px;border:1px solid #58cb8e;background:url(http://my.zhaopin.com/images/new_v4/righticon.png) 242px 8px no-repeat;}
+.inputTexts_indent{line-height:30px;height:30px;font-size:18px;border:1px solid #58cb8e;background:url(http://my.zhaopin.com/images/new_v4/righticon.png) 130px 8px no-repeat;}
+/*add by for free resume beg*/

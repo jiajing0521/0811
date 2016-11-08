@@ -1,0 +1,613 @@
+/* 头部功能区 搜索器 */
+html,body{font-size:12px;color:#666;font-family:simsun;background:#FFF;}
+body {
+    font-family:simsun;
+}
+a{text-decoration:none;color:#315aaa}
+a:hover{text-decoration:underline}
+.hidden{display:none;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}
+#funSearch{
+    clear:both;
+    width:725px;
+}
+#searchForm {
+    height:38px;
+	font-size:14px;
+   /* background:url("http://img02.zhaopin.cn/2012/img/index/se.png") repeat-x 0 -63px;
+    border:1px solid #f4f9fd;
+    border-radius:3px;*/
+}
+#searchForm div {
+    float:left;
+    height:35px;
+    width:130px;
+    margin:3px 8px 0 0px;
+    background:url("http://img02.zhaopin.cn/2012/img/searchjob/search_tab.png") no-repeat;
+	overflow:hidden;
+	display:inline;
+}
+#searchForm .currentFocus{
+	background:url("http://img02.zhaopin.cn/2012/img/searchjob/search_tabcurrent.png") no-repeat;
+}
+/*
+#searchForm .job {
+    margin-left:10px;
+}
+*/
+#searchForm .city {
+    background:url("http://img02.zhaopin.cn/2012/img/searchjob/search_tab3.png") no-repeat;
+    /*margin-left:9px;*/
+    cursor:pointer;
+	width:131px;
+	height:35px;
+	overflow:hidden;
+}
+#searchForm .keyword {
+    width:178px;
+    height:35px;
+	overflow:hidden;
+    background:url("http://img02.zhaopin.cn/2012/img/searchjob/search_tab2.png") top no-repeat;
+}
+#searchForm .searchbtn {
+    background:none;
+    margin-right:0px;
+	width:118px;
+	overflow:hidden;
+}
+#buttonSelJobType,#buttonSelIndustry,#JobLocation2 {
+    width:100px;
+    margin:0px 0 0 25px;
+    text-align:left;
+    cursor:pointer;
+	font-size:14px;
+	overflow:hidden;
+	height:33px;
+	line-height:33px;
+	height:36px\9;
+	line-height:36px\9;
+}
+#JobLocation {
+    width:63px;
+    margin:10px 0 0 7px;
+    float:left;
+	font-size:14px;
+}
+#KeyWord_kw2 {
+    height:20px;
+	line-height:20px;
+    font-size:14px;
+    margin:7px 0 0 10px;
+    width:165px;
+}
+#buttonSelCity {
+    background:url("http://img02.zhaopin.cn/2012/img/searchjob/search_tab4.png") no-repeat;
+    width:52px;
+    height:27px;
+    cursor:pointer;
+    float:right;
+    margin:4px 4px 0 0;
+}
+button.doSearch {
+    background:url("http://img02.zhaopin.cn/2012/img/searchjob/search_but.png") no-repeat;
+    width:118px; height:35px;
+}
+button.doSearch:hover {
+    background:url("http://img02.zhaopin.cn/2012/img/searchjob/search_but.png") no-repeat;
+}
+#searchForm #advSearch {
+    float:right;
+    width:123px;
+    margin:0;
+    line-height: 29px;
+    background: none;
+}
+/* 头部功能区 搜索器 End */
+
+.divMask {position:absolute;background:#ffffff;}
+.clear{ clear:both; height:0; line-height:0;font-size:0px;visibility:hidden;}
+.sPopupDiv {
+	position:absolute;
+	z-index:1000;
+	visibility:hidden;
+	top:-100px;  
+	border:2px solid #CBCBCB; 
+	background-color:#FFF;
+	left:-100px;
+	padding-left:5px; 
+	padding-right:5px;
+	box-shadow:0 0 40px #ccc;
+}
+.sPopupDiv input,.sPopupDivSub input,.sPopupDivSubJobname input {margin-right:3px;*margin-right:0;vertical-align:middle}
+.sPopupDiv .mOutItem,.sPopupDivSubJobname .mOutItem {background-color:transparent;}
+.sPopupDiv .mOverItem,.sPopupDivSubJobname .mOverItem {background-color:#d2ecfe;}
+.sPopupDiv .sPopupTitle232,.sPopupDiv .sPopupTitle240 {
+	background-color:#FFF;
+    float: left;
+    height: 39px;
+    line-height: 39px;
+    width: 710px;
+	border-bottom:2px solid #315aaa;
+}
+.sPopupDiv .sPopupTitle_down230 {
+    width:230px;height:32px;line-height:28px;background:url("http://img02.zhaopin.cn/2012/img/index/se.png") no-repeat -243px -135px #fff;margin-top:-1px;float:left;}
+.sPopupDiv .sPopupTitle_down164 {width:164px;height:32px;line-height:28px;background:url("http://img02.zhaopin.cn/2012/img/index/se.png") no-repeat -476px -135px #fff;margin-top:-1px;float:left;}
+.sPopupDiv .sPopupTitle_down164 h1, .sPopupDiv .sPopupTitle232 h1,.sPopupDiv .sPopupTitle_down230 h1,.sPopupTitle240 h1, .sPopupTitle_down240 h1,.sPopupDiv .sPopupTitle_down134 h1 {float:left;font-size:14px;font-weight:bold;color:#696969;margin-left:10px;_margin-left:5px;font-family:tahoma;}
+.sPopupDiv .sButtonBlock {margin-right:8px;_margin-right:4px;color:#fff;font-size:12px;padding-top:10px;_padding-top:12px;}
+/****/
+.sPopupDiv .sButtonBlock a,.sPopupDivSubJobname .sButtonBlock a {
+color:#ffffff;
+font-size:12px;
+text-decoration:none !important;
+background:url("http://img02.zhaopin.cn/2012/img/searchjob/searchButton.png") 0 -24px no-repeat;
+width:62px;
+height:22px;
+display:inline-block;
+padding:0;
+text-align:center;
+line-height:22px;
+_margin-top:3px; 
+margin-left:5px;
+}
+.sPopupDivLeftTop .sButtonBlock .orgButton,
+.sPopupDivRightTop .sButtonBlock .orgButton,
+.sPopupDivLeftBottom .sButtonBlock .orgButton,
+.sPopupDivRightBottom .sButtonBlock .orgButton{
+margin-left:0px;
+}
+.sPopupDivLeftTop .sButtonBlock a,
+.sPopupDivRightTop .sButtonBlock a,
+.sPopupDivLeftBottom .sButtonBlock a,
+.sPopupDivRightBottom .sButtonBlock a{
+_margin-top:8px;
+}
+.sPopupDivSubJobname .sButtonBlock .blueButton{color:#336699; background-position:0 0;}
+.sPopupDiv .sButtonBlock a.blueButton,.sPopupDivSubJobname .sButtonBlock a.blueButton.sButtonBlock a.closeButton {background-position:0 0;width:62px;color:#336699; margin-left:5px;}
+.sButtonBlock a.closeButton{ width:25px; height:23px; float:right; margin-top:8px; padding:4px;background:url("http://img02.zhaopin.cn/2012/img/searchjob/colse.gif") center no-repeat;}
+.sButtonBlock a.closeButton:hover{background:url("http://img02.zhaopin.cn/2012/img/searchjob/colsehover.gif") center no-repeat #87caf7;}
+.sPopupDiv .sButtonBlock a.blueButton:hover,.sPopupDivSubJobname .sButtonBlock a.blueButton:hover {background-position: 0 0;width:62px;}
+.sPopupDiv .sButtonBlock a.orgButton:hover,.sPopupDivSubJobname .sButtonBlock a.orgButton:hover {background-position:0 -24px;}
+.sPopupDiv .sPopupBlock {background:#fff;}
+.sPopupDiv .sPopupBlock table {width:100%;margin:0;border-collapse:separate;}
+/**行业搜索 容器边距**/
+.sPopupDiv .sPopupBlock .paddingTB {padding-top:5px;padding-bottom:10px;}
+.sPopupDiv .sPopupBlock .sPopupTabCB {margin-left:30px;}
+.sPopupDiv .sPopupBlock td {
+border:0;
+padding:3px 2px;
+text-align:left;
+}
+.sPopupDiv .sPopupBlock td.leftClass {text-align:right !important;padding-right:5px !important;vertical-align:middle;font-weight:bold;}
+.sPopupDiv .sPopupBlock td.industryLCla {width:184px;}
+.sPopupDiv .sPopupBlock td.jobtypeLCla {width:150px;}
+.sPopupDiv .sPopupBlock td.jobtypeItems {padding:1px 2px;}
+/**行业搜索 td之间10像素的边距padding:2px 2px;*padding:0 2px;**/
+.sPopupDiv .sPopupBlock table.chebox td { 
+border:2px solid #fff;
+border-right-width:4px;
+padding:0px 0px;
+}
+.sPopupDiv .sPopupBlock table.chebox td.mOutItem{
+	_padding:0px!important;
+}
+.sPopupDiv .sPopupBlock table.chebox td.mOutItem label input{
+    vertical-align:top;
+	_vertical-align:middle;
+	height:16px;
+}
+.sPopupDiv .sPopupBlock table.chebox .zebraCol1 td{border-color:#f1f1f1;}
+.sPopupDiv .sPopupBlock td span,.sPopupDiv .sPopupBlock td label {display:block;width:100%;height:100%;}
+/**职位类别span文字颜色**/
+.sPopupDiv .sPopupBlock td span.availItem {color:#336699;cursor:pointer;height:16px;line-height:16px;overflow:hidden;}
+.sPopupDiv .sPopupBlock td span.seledItem {color:#ff7100;cursor:default;}
+.sPopupDiv .sPopupBlock td span.seledAvailItem {color:#ff7100;cursor:pointer;}
+/*复选框label的字的颜色*/
+.sPopupDiv .sPopupBlock label.noselItem {color:#336699;cursor:pointer;}
+.sPopupDiv .sPopupBlock label.seledItem {color:#336699;cursor:pointer;}
+
+.sPopupDiv .focusItemBottom {border:#BDD6E6 2px solid !important;border-top:#f3faff 2px solid !important;background:#f3faff url("http://img02.zhaopin.cn/2012/img/searchjob/index_sj_iconminus.png") no-repeat 4px center !important;text-indent:20px;background-color:#f3faff !important;padding-top:3px !important;}
+.sPopupDiv .blurItem {
+background-image:url(http://img02.zhaopin.cn/2012/img/searchjob/index_sj_iconplus.gif);
+background-repeat:no-repeat;
+background-position:4px center;
+text-indent:20px;
+padding-top:3px !important;
+*padding-top:7px!important;
+}
+.sPopupDiv .focusItemBottom .availItem{ text-indent:5px;}
+.sPopupDiv .zebraCol0 .blurItem {border:#fff 2px solid;}
+.sPopupDiv .zebraCol1 .blurItem {border:#F1F1F1 2px solid;}
+.sPopupDiv .focusItemBottom span.availItem{width:100%;font-weight:bold;}
+
+/**职位搜索大类点击后的效果**/
+.sPopupDiv .focusItemTop {
+	border:#BDD6E6 2px solid !important;
+	border-bottom:#f3faff 2px solid !important;
+	background:#f3faff url("http://img02.zhaopin.cn/2012/img/searchjob/index_sj_iconminus.png") no-repeat 6px center !important;
+	*background-position:6px 2px;
+	text-indent:5px; 
+	margin-left:-2px;
+	background-color:#f3faff !important;
+	padding-top:3px !important;
+	font-weight:bold;color:#336699;
+	z-index:3000;
+}
+.sPopupDiv .focusItemTop label{
+	*text-indent:0;
+}
+.sPopupDiv  td.focusItemTop span.availItem{
+	color:#336699; 
+	width:auto; 
+	height:auto;
+	padding-left:0px;
+	float:left;
+	display:inline;
+}
+.sPopupDiv .blurItem input,
+.sPopupDiv .focusItemTop input,
+.sPopupDiv .focusItemBottom input{
+	margin:0;
+	padding:0;
+	margin-left:20px;
+	*margin-left:15px;
+	float:left;
+	z-index:2000;
+}
+.sPopupDiv .zebraCol1 .focusItemBottom{border-top-color:#f3faff} 
+.sPopupDiv .blurItem input,
+.sPopupDiv .blurItem span{
+
+ }
+.sPopupDiv .focusItemTop input,
+.sPopupDiv .focusItemBottom input{_height:13px;overflow:hidden;}
+.sPopupDiv .focusItemBottom input{*vertical-align:bottom;*margin-top:3px;}
+.sPopupDiv .focusItemTop span{*padding-top:0px;}
+
+.sPopupDiv .blurItem span,
+.sPopupDiv .focusItemTop span,
+.sPopupDiv .focusItemBottom span{_float:left!important;}
+.sPopupDiv .focusItemTop span,
+.sPopupDiv .focusItemBottom span{*width:75%!important;}
+.sPopupDiv .sPopupTabCB .blurItem span,
+.sPopupDiv .sPopupTabCB .blurItem input{*float:left;}
+.sPopupDiv .sPopupTabCB .blurItem span{*width:60%;}
+.sPopupDiv .sPopupTabCB .focusItemTop span{*width:60%!important;}
+
+.sPopupDiv .sPopupBlock font.mOutItem {padding:3px 2px;background:transparent;size:12px;font-weight:normal;margin:0;}
+.sPopupDiv .sPopupBlock font.mOverItem {padding:3px 2px;background:none;size:12px;font-weight:normal;margin:0;}
+.sPopupDiv .sPopupBlock font.mOutItem span.availItem,.sPopupDiv .sPopupBlock font.mOverItem span.availItem {color:#fff;cursor:pointer;}
+.sPopupDiv .sPopupBlock font.mOutItem span.seledItem,.sPopupDiv .sPopupBlock font.mOverItem span.seledItem {color:#fff;cursor:default;}
+.sPopupDiv .sPopupBlock .pIconPlus {width:14px;height:14px;background:url("http://img02.zhaopin.cn/2012/img/searchjob/index_sj_iconplus.png") 0 2px no-repeat transparent;cursor:pointer;margin-right:6px;display:inline-block;margin-top:1px;}
+.sPopupDiv .sPopupBlock .pIconMinus {width:14px;height:14px;background:url("http://img02.zhaopin.cn/2012/img/searchjob/index_sj_iconminus2.png") 0 2px no-repeat transparent;cursor:pointer;margin-right:6px;display:inline-block;margin-top:1px;}
+.sPopupDiv .sPopupBlock .pCityTitB {
+clear:both;
+color:#fff;
+padding-left:15px;
+background:url("http://img02.zhaopin.cn/2012/img/searchjob/pCityTitBbg.png") left top repeat-y;
+text-align:left;font-size:14px;height:19px;
+margin:1px 0 1px 0px;
+line-height:19px;
+}
+.sPopupDiv .sPopupBlock .pCityTitB a {color:#666;text-decoration:none;}
+.sPopupDiv .sPopupBlock .pCityItemB {width:auto;clear:both;color:#000;padding-bottom:5px;padding-top:2px;}
+.sPopupDiv .sPopupBlock a.gotoup {font-size:12px;font-weight:normal;}
+.sPopupDiv .sPopupBlock a.gotoup:hover {font-size:12px;font-weight:normal;text-decoration:underline;}
+.sPopupDiv .zebraCol0 {background:#fff;}
+.sPopupDiv .zebraCol1 {background:#F1F1F1;}
+.sPopupDiv .popupDivTipsB {background:#f2f2f2;padding:5px;color:#000;line-height:18px;clear:both;}
+.sPopupDiv .popupDivTipsB b {color:#ff7200;}
+.sPopupDiv .popupDivTM {height:8px;font-size:0;line-height:0;clear:both;}
+.sPopupDiv font.cursorPointer {cursor:pointer;}
+.sPopupDiv .sPopupBlock .seledItemsB {background:#f4f4f4;border:#3f419e 1px dotted;clear:both;padding:4px;color:#000;margin-bottom:5px;}
+.sPopupDiv .sPopupBlock .seledItemsCon {}
+.sPopupDiv .sPopupBlock .seledTab td {height:20px;}
+.sPopupDiv .sPopupBlock .seledTab td.mOutItem {background:#f4f4f4;}
+.sPopupDiv #jobTab {margin-bottom:5px;}
+.sPopupDiv .sPopupTabC td {
+padding:2px !important; 
+border:2px solid #fff;
+*padding:3px 2px !important; 
+}
+.sPopupDivSub {position:absolute;z-index:1000;visibility:hidden;top:-100px;left:-100px;background:#f3f9ff;border:#3f419e 1px solid;padding:5px;}
+.sPopupDivSub td.mOutItem {background:#f3f9ff;}
+.sPopupDivSub td.mOverItem {background:#d2ecfe;}
+.sPopupDivSub td label {display:block;width:100%;height:100%;}
+.sPopupDivSub td label.noselItem {color:#666;cursor:pointer;}
+.sPopupDivSub td label.seledItem {color:#ff7100;cursor:pointer;}
+.sPopupDivSub table.chebox td {padding:1px 2px;*padding:0 2px;}
+.sPopupDivSub td.hBlueLine {border-top:#3f419e 1px solid;}
+/**子弹窗**/
+.sPopupDivSubJobname {position:absolute;z-index:1000;visibility:hidden;top:-100px;left:-100px;background:#f3faff;border-left:#bdd6e6 2px solid;border-right:#bdd6e6 2px solid;padding:0;width:346px;}
+.sPopupDivLeftTop {background:#f3faff url("http://img02.zhaopin.cn/2012/img/searchjob/subpopupdivbg_l.gif") no-repeat left top;border-bottom:#bdd6e6 2px solid;padding-top:2px !important;}
+.sPopupDivLeftBottom {background:#f3faff url("http://img02.zhaopin.cn/2012/img/searchjob/subpopupdivbg_l.gif") no-repeat left bottom;border-top:#bdd6e6 2px solid;padding-bottom:1px !important;}
+.sPopupDivRightTop {background:#f3faff url("http://img02.zhaopin.cn/2012/img/searchjob/subpopupdivbg_l.gif") no-repeat right top;border-bottom:#bdd6e6 2px solid;padding-top:2px !important;}
+.sPopupDivRightBottom {background:#f3faff url("http://img02.zhaopin.cn/2012/img/searchjob/subpopupdivbg_l.gif") no-repeat right bottom;border-top:#bdd6e6 2px solid;padding-bottom:1px !important;}
+/**paddingBlock 职位搜索子弹层 表单容器**/
+.sPopupDivSubJobname .paddingBlock {
+padding:5px;
+background-color:#f3faff;
+}
+.sPopupDivSubJobname table {margin:0;}
+.sPopupDivSubJobname td {border:0;}
+.sPopupDivSubJobname td.mOutItem {background:#f3faff;}
+.sPopupDivSubJobname td.mOverItem {background:#d2ecfe;}
+.sPopupDivSubJobname td label {display:block;width:100%;height:100%;}
+.sPopupDivSubJobname label.noselItem {color:#333;cursor:pointer;}
+.sPopupDivSubJobname label.noselItem_selAll {color:#666;cursor:pointer;}
+.sPopupDivSubJobname label.seledItem {color:#333;cursor:pointer;}
+/**paddingBlock 职位搜索子弹层 表单中td **/
+.sPopupDivSubJobname table.chebox td {padding:2px 3px;*padding:0px;}/**20121106**/
+.sPopupDivSubJobname td.hBlueLine {border-top:#3f419e 1px solid;}
+.sPopupDivSubJobname .sButtonBlock {background:#f3faff;border-top:1px solid #bdd6e6;height:37px;line-height:37px;clear:both;padding-left:6px;margin-bottom:1px; width:354px;}
+/* 搜索器 弹出层 */
+
+/***箭头***/
+.student_tips{position:absolute; font-size:30px;background:url("http://img02.zhaopin.cn/2012/img/searchjob/up.png") no-repeat;width:26px; height:14px; overflow:hidden; top:-14px;left:185px;}
+.student_tips em{ color:#999;}
+.student_tips span{ color:#FFF; top:2px;}
+.student_tips em,.student_tips span { height: 18px; position: absolute; width: 27px;}
+
+/**行业类别和确定在一行内显示**/
+.sPopupTitle130 h1,.sPopupTitle131 h1,.sButtonBlock{ 
+float:left;
+}
+.sPopupTitle130 h1,.sPopupTitle131 h1{
+	font-size:14px;
+	font-weight:bold;
+	color:#666666;
+	padding-left:10px;
+	padding-top:15px;
+}
+.sPopupTitle130,.sPopupTitle131{
+	border-bottom:2px solid #87caf7;
+	position:relative;
+	height:auto;
+	overflow:hidden;
+	padding-bottom:10px;
+	width:100%;
+}
+.sButtonBlock a.closeButton{
+	float:none;
+	position:absolute;
+	right:0px;
+	top:3px;
+	margin-top:0px;
+}
+.sPopupDiv .sPopupBlock td label {display:block;width:100%;height:100%;}
+.sPopupDiv .sPopupBlock td  label.availItem {color:#ff7100;cursor:pointer; }
+
+/**citycheck select**/
+#seledCity{
+	padding-left:15px;
+	color:#999;
+	min-height:31px;
+}
+.seledCityItem{
+	background-color:#84c6f2;
+	color:#fff;
+	padding:0px 5px;
+	line-height:17px;
+	padding-bottom:1px;
+	*padding-bottom:2px;
+	margin-right:10px;
+	padding-right:0px;
+	display:inline-block;
+	margin-top:10px;
+}
+.seledCityItem a,.seledCityItem a:hover,.seledCityItem a:active{
+	color:#fff;
+	font-size:17px;
+	margin-left:3px;
+	width:11px;
+	height:19px;
+	padding:0px 6px;
+	padding-bottom:2px;
+	background:url("http://img02.zhaopin.cn/2012/img/searchjob/closeseledCity.gif") 5px 5px no-repeat;
+}
+.seledCityItem a:hover,.seledCityItem a:active{
+	text-decoration:none;
+	background-color:#00a5e8;
+}
+.sPopupDivSubJobname{
+	/**margin-left:-2px\0;**/
+}
+.sPopupDivSubCity{
+	background:url("http://img02.zhaopin.cn/2012/img/searchjob/subpopupdivbg_l.gif") top right no-repeat #f3faff;
+	background-position-y:-1px!important;
+	border-bottom:2px solid #bdd6e6;
+	padding-top:2px!important;
+}
+.sPopupDivSubCity span{
+	display:block;
+	float:left;
+	min-width:107px;
+	height:21px;
+	line-height:21px;
+	overflow:hidden;
+	margin-right:5px;
+	_zoom:1;
+	_margin-top:-6px;
+}
+.sPopupDivSubCity label.noselItem{
+	color:#336699;
+	margin:0;
+	padding:0;
+	_zoom:1;
+	width:100%;
+}
+
+.paddingBlock:after{
+content:".";display:block;height:0;clear:both;visibility:hidden;
+}
+/**行业类别选择 td间距**/
+.sPopupDiv .jobtypeItems td {
+	*border-width:2px !important;
+	*padding-top:2px !important;
+}
+.sPopupDiv .sPopupTabC td.mOutItem {
+	*border-width:0px !important;
+	*padding:2px !important;
+}
+/*选择城市 城市弹层hack*/
+.sPopupDiv .sPopupTabC td.blurItem input,
+.sPopupDiv .sPopupTabC td.focusItemTop input{
+	*margin-top:0px; 
+    *margin-left:15px;
+}
+.sPopupDiv .sPopupTabC td.focusItemTop label{
+    *height:15px;
+	*margin-top:-2px;
+}
+.sPopupDiv .sPopupBlock td.focusItemBottom{
+
+}
+.sPopupDiv .sPopupBlock td.focusItemBottom label,
+.sPopupDiv .sPopupTabC td.focusItemTop label{
+    text-indent:5px;
+	*text-indent:0;
+	font-weight:bold;
+	color:#336699;
+	/**vertical-align:-4px;*/
+	*height:16px;
+	*line-height:16px;
+	overflow:hidden;
+}
+.sPopupDiv .sPopupBlock td.focusItemBottom label{
+	*height:13px;
+	*border:0;
+	
+}
+.sPopupDiv .sPopupBlock td.blurItem label input,
+.sPopupDiv .sPopupBlock td.focusItemBottom label input{
+	*margin-top:0px;
+	*height:13px;
+}
+.inputAction {color:#000000}
+.inputTips {color:#9a9a9a}
+
+
+/**工作经验**/
+.sPopupDiv .sPopupBlock {
+
+}
+
+/**搜索频道 新添修改 song 20120604**/
+.sPopupTitle290,.sPopupTitle225{
+	border-bottom: 2px solid #87CAF7;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+    position: relative;
+    width: 100%;
+}
+.sPopupTitle290 h1,.sPopupTitle225 h1{
+    color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 15px;
+	float:left;
+}
+.paddingDiv{
+	padding:10px;
+	padding-bottom:15px;
+}
+.paddingDiv td span{
+	line-height:18px;
+}
+.sPopupDivSubCity .paddingDiv{
+	padding-left:27px;
+}
+.sPopupDiv .sPopupTabC .focusItemTop .availItem{
+	padding-left:18px!important;
+}
+.sPopupDivSubCity .subCboxItem span.availItem{
+	margin-left:18px;
+	display:inline-block;
+	width:100px;
+	cursor:pointer;
+}
+.sPopupDivSubCity .subCboxItem span.seledItem{
+	margin-left:18px;
+	display:inline-block;
+    color: #FF7100;
+    cursor: default;
+}
+.sPopupDiv .sPopupBlock .pCityItemB .sPopupTabCB td{
+	background-color:#fff;
+	border:2px solid #fff!important;
+}
+.sPopupDiv .sPopupBlock .pCityItemB .sPopupTabCB td.focusItemTop{
+	border:2px solid #BDD6E6!important;
+}
+.paddingBlock .subCboxItem .availItem{
+	_margin:0;
+}
+.sPopupDiv .paddingDiv .spaceHoriz td{
+	border-top:1px solid #bdd6e6;
+}
+.sPopupDivSubCity .paddingBlock{
+	_margin-top:10px;
+}
+.sPopupDivSubCity .paddingBlock .availItem{
+	line-height:22px;
+}
+/**song0709**/
+.sPopupDiv .focusItemTop div .availCbox{
+	*margin-top:-3px!important;
+	_margin-top:0!important;
+}
+/*职位收藏弹层样式*/
+  .sou-collect{
+	   width:239px;
+		height:90px;
+		border:1px solid #dae5f3;
+		background:#eff5fc;
+		font-size:14px;
+		display:none;
+		position:absolute;
+	}
+	.collect-title{
+		height:28px;
+		line-height:28px;
+		width:95px;
+		margin-left:70px;
+		margin-top:18px;
+		text-align:right;
+		background:url('http://img02.zhaopin.cn/2012/img/ico.png') no-repeat 0 2px;
+	}
+	.collect-content{
+	   height:28px;
+	   line-height:28px;
+	   text-align:center;
+	}
+	.collect-content a{
+	  color:#369;
+	}
+	.collect-fail{
+		background-position:0 -27px; 		
+	}
+/**20131128 song**/
+.applyyn{background-color:#fff0c7;margin:10px;padding:10px 70px;font-size:14px;color:#333;line-height:24px;display:none}
+.applyyn h3{font-size:15px;font-weight:bold;text-align:center;line-height:42px;background:url(http://img02.zhaopin.cn/2012/img/my/v5/successicon4.gif) 132px 12px no-repeat;}
+.applyyn .noappbg{background:url(http://img02.zhaopin.cn/2012/img/my/v5/successicon5.gif) 41px 12px no-repeat;}
+.applyynmark{color:red}
+.selectall-btn{border:0;}
+#frmokMain{display:block;margin:0;padding:0;font-size:0;letter-spacing:0;}
+.applyynTab{width:505px;margin:0 auto;font-size:12px;}
+.applyynTab td{height:26px;}
+.applyynTab a{text-decoration:none;}
+.applyynTab a:hover{text-decoration:underline;}
+.applyynTab .applyynTaball{height:75px;}
+.applyynTab .Jobname{font-weight:bold;width:206px;}
+.applyynTab .Jobname a{display:block;width:16em;height:26px;line-height:26px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.applyynTab .Companyname{width:206px;}
+.applyynTab .Companyname span{display:block;width:206px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.checkboxAll{vertical-align:-3px;margin-right:12px}
+.selectall-btn{background: url(http://img00.zhaopin.cn/2012/other/search/images/button_sprites.png) no-repeat scroll -223px 0; height: 28px; margin: 0 5px;overflow: hidden;width: 103px;}

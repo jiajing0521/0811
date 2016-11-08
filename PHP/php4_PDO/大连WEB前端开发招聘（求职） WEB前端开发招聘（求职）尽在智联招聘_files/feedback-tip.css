@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+/*2014-11-27*/
+
+/*投递成功弹窗*/
+.Delivery_success_popdiv { background:#FFF; width:600px; height:340px; position:absolute; z-index:999; font-family:"SimHei",黑体; color:#000000;}
+.Delivery_success_popdiv_title{ position:relative; height:80px; line-height:80px;font-size:24px; text-align: center; background-color:#3f7ed7; color:#FFF; font-size:24px;font-family:"SimHei",黑体;}
+.Delivery_success_popdiv_title h2{ line-height:80px;  }
+.popup_close{ position:absolute; background:url(http://img02.zhaopin.cn/2014/common/img/feedback/icon_close02.gif) no-repeat right center; width:20px; height:20px; right:10px; top:10px; cursor:pointer; }
+.Delivery_success_popdiv_content{ padding:40px 0px 40px 30px; font-family:"SimHei",黑体; font-size:18px;}
+.Delivery_success_popdiv_conleft{ width:180px; height: 180px; border: 3px solid #3f7ed7; display:inline;}
+.Delivery_success_popdiv_conright{ width:364px; display:inline; padding-top:30px;}
+.Delivery_success_popdiv_conright p span{ font-size:30px;font-family:"SimHei",黑体;  }
+.Delivery_success_popdiv_conright p b{font-size:18px;}
+.Delivery_success_popdiv_conright p.lin37{ line-height:37px; font-family:"SimHei",黑体; font-size:24px;}
+.Delivery_success_popdiv_conright p.lin37 font{ font-size:24px;}
+
+/*反馈同入口弹窗*/
+.fb_company_popdiv{ width:600px; height:270px; background-color:#ffffff;font-family:"SimHei",黑体;}
+.fb_company_popdiv_title{ height:70px; line-height:70px; text-align:center; color:#FFF; font-size:24px;font-family:"SimHei",黑体; background-color:#3f7ed7;}
+.fb_company_popdiv_content{ padding:30px;font-family:"SimHei",黑体; font-size: 18px; color: #00000;}
+.no_checked i.sevDays_check{ background:url(http://img02.zhaopin.cn/2014/common/img/feedback/icon_check.gif) no-repeat 0 0;}
+.fb_company_btn{font-family:"SimHei",黑体; background-color:#4caf50; border-radius:5px; width:140px; height:46px; line-height:46px; text-align:center; font-size:18px; color:#fff;}
+.fb_company_popdiv_content p.PadT{ padding-top:47px; text-align:center;}
+.sevDays_check{ width:24px; height:24px; background:url(http://img02.zhaopin.cn/2014/common/img/feedback/icon_checked.gif) no-repeat 0 0; vertical-align:middle; display:inline-block; cursor:pointer;}
+.fb_company_list li span.nopointer{ cursor:default;}
+
+.color01{ color:#555555;}
+.color02{ color:#ff2626;}
+.color03{ color:#d3d3d3;}
+.color04{ color:#ff6600;}
+.font14{ font-family:14px;}
+.Pad20{ padding:15px 20px 15px 20px;}
+.borderbox{border:1px solid #dfdfdf; }
+.fontWei{ font-weight:bold;}
+.nopointer{ cursor:default;}
+
+/*遮罩*/
+.global-mask-container,.part-mask-container{z-index: 200 ; position: absolute ;left: 0px ; top: 0px ;opacity: 0.5 ;background-color: #7f7f7f;filter: alpha(opacity=50);  }
+.part-mask-container{z-index: 300 ;}
+.global-mask-content,.part-mask-content{visibility: visible ;position: absolute;z-index: 201 ;}
+.part-mask-content{width : 315px;text-align : center;padding-bottom : 30px;background: url(http://img02.zhaopin.cn/2014/rd2/img/sysLoading.gif) no-repeat scroll 0 bottom; z-index: 301 ;}
+
+/*最佳僱主彈框*/
+.best_pop_top{ background: url(http://img01.zhaopin.cn/2014/c/img/other/best_img01.jpg) no-repeat; width: 602px; height: 131px; position:relative;}
+.best_pop_top a{ position: absolute; top: 7px; right: 7px; display: inline-block; width: 31px; height: 29px;}
+.best_pop_cont{ background: url(http://img01.zhaopin.cn/2014/c/img/other/best_img02.jpg) repeat-y; width: 602px; }
+.best_pop_bottom{ background: url(http://img01.zhaopin.cn/2014/c/img/other/best_img03.jpg) no-repeat; width: 602px; height: 38px;}
+.best_text{font-family: "黑体"; font-size: 20px; color: #0055C8; padding: 24px 0 0 60px;}
+.best_company_box{margin: 0 90px 0;padding:50px 0 25px;}
+.best_company{ font-family: "黑体"; font-size: 14px;color: #0055C8;}
+.best_company a{color: #0055C8; display: inline-block; width: 434px; height: 35px; text-decoration: none; overflow: hidden; white-space:nowrap; text-overflow: ellipsis; position: relative;}
+.best_company a:hover{ text-decoration: underline;}
+.best_company span{ position: absolute; right: 0;}
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        label{
+            font-weight: bold;
+        }
+        input[type="text"]{
+            width:300px;
+            height:30px;
+            margin-bottom: 20px;
+        }
+        #username{
+            font-size: 16px;
+         }
+    </style>
+
+</head>
+<body>
+<form action="02_emailLogin.php" method="post">
+    <label for="username">用户名:</label>
+    <input type="text" id="username" name="username" placeholder="请输入电话/昵称/邮箱">
+    <br>
+
+    <label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+    <input type="text" id="password" name="password">
+    <br>
+
+    <input type="submit" name="type" value="登录">
+    <input type="button" name="btn" value="注册" onclick="window.location.href='02_emailSignin.html'">
+
+</form>
+</body>
+</html>
