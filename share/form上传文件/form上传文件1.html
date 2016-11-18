@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form上传文件</title>
+	</head>
+	<body>
+		<form action="api.php" enctype="multipart/form-data" method="post">
+			<input type="file" name="img[]" id="files" multiple value="" />
+			<input type="submit" name="" id="" value="提交" />
+		</form>
+		<button id="btn">ajax 上传文件</button>
+		
+		<script src="../../js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var files = document.getElementById("files");
+			var formData = new FormData();
+			files.onchange = function(){
+				for (var i = 0; i < this.files.length; i++) {
+					formData.append("img[]",this.files[i]);
+					console.log(this.files[i]);
+				}
+			}
+			var btn = document.getElementById("btn");
+			btn.onclick = function(){
+				$.ajax({
+					type:"post",
+					url:"api.php",
+					data:formData,
+					contentType:false,
+					processData:false,
+					success:function(data){
+						console.log(data);
+					},
+					err:function(data){
+						console.log(data);
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding:0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+ul,li{
+    list-style: none;
+}
+#all0{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/第一页背景.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /*text-align: center;*/
+    position: relative;
+    top: 0;
+    left: 0;
+    /*display: none;*/
+}
+#img0{
+    width: 95.55555%;
+    height: 30.26087%;
+    transition: all 1s;
+    position: absolute;
+    left: 100%;
+    top: 7%;
+}
+#img1{
+    width: 51.80555%;
+    height: 7.130435%;
+    position: absolute;
+    left: 110%;
+    top: 27%;
+}
+#img2{
+    width: 60.8333%;
+    height: 4.869565%;
+    position: absolute;
+    left: -70%;
+    top: 35%;
+}
+#img3{
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    width: 79.3055%;
+    height: 9.652174%;
+    opacity: 0;
+}
+#img4{
+    position: absolute;
+    bottom: 18%;
+    left: 42%;
+    width: 17.63888%;
+    height: 2.086957%;
+    opacity: 0;
+}
+#all1{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#img5{
+    position: absolute;
+    top: 10%;
+    left: 9%;
+    width: 85.2777%;
+    height: 63.478261%;
+}
+#cha{
+    width: 9%;
+    height: 5%;
+    /*background-color: red;*/
+    border-radius: 100px;
+    position: absolute;
+    top: 25%;
+    right: 7%;
+}
+#all2{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/第二页背景图.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#img6{
+    width: 79.3055%;
+    height: 9.652174%;
+    position: absolute;
+    bottom: 40%;
+    left: 10%;
+}
+#all3{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/第三背景.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: none;
+}
+#all3 img{
+    width: 79.3055%;
+    height: 9.652174%;
+}
+#img7{
+    position: absolute;
+    bottom: 17%;
+    left: 10%;
+}
+#img8{
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+}
+#div0{
+    width: 100%;
+    height: 10%;
+    color: white;
+    font-size:17px;
+    text-align: center;
+    position: absolute;
+    top: 36%;
+    left: 0;
+}
+.gai{
+    color: rgb(255,207,0);
+}
+#div2{
+    margin-top:2% ;
+}
+#all4{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/没过关背景.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: none;
+}
+#all4 img{
+    width: 79.3055%;
+    height: 9.652174%;
+}
+#img9{
+    position: absolute;
+    bottom: 17%;
+    left: 10%;
+}
+#img10{
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+}
+#div3{
+    width: 100%;
+    height: 10%;
+    color: white;
+    font-size:17px;
+    text-align: center;
+    position: absolute;
+    top: 36%;
+    left: 0;
+}
+.gai1{
+    color: rgb(255,207,0);
+}
+#all5{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#all5 img{
+    width: 85.2777%;
+    height: 83.478261%;
+    position: absolute;
+    top: 2%;
+    left: 10%;
+}
+#all5 .ranking{
+    width: 85.2777%;
+    height: 53.478261%;
+    position: absolute;
+    top: 33%;
+    left: 10%;
+}
+#cha1{
+    width: 9%;
+    height: 6%;
+    border-radius: 100px;
+    /*background-color: red;*/
+    position: absolute;
+    top: 15.9%;
+    right: 6%;
+}
+#all6{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#all6 img{
+    width: 73.05555%;
+    height: 58.34785%;
+    position: absolute;
+    top: 3%;
+    right: 10%;
+}
+
+
+/*--------------------------------这个看看吧!!------------------------------*/
+/*--------------------------------这个看看吧!!------------------------------*/
+/*--------------------------------这个看看吧!!------------------------------*/
+/*--------------------------------这个看看吧!!------------------------------*/
+/*--------------------------------这个看看吧!!------------------------------*/
+#allGame{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.timerClock{
+    width:36%;
+    height:12%;
+    position: absolute;
+    left: 2%;
+    top:1%;
+
+    text-align: right;
+    background: url("../img/timerClock.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: 99;
+}
+.timerClockP{
+    width: 100%;
+    height:30%;
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    top:52%;
+    left:-12%;
+}
+.starting_line{
+    width:83.333333%;
+    height:8%;
+    position: absolute;
+    left: 9.16666%;
+    top:52.52173%;
+    z-index: 99;
+}
+.light{
+    width:20%;
+    height:28.17391%;
+    position: absolute;
+    left: 40.277777%;
+    top:11.47826%;
+    z-index: 99;
+}
+.ready{
+    width:33.88888%;
+    height:4.86956%;
+    position: absolute;
+    left: 33.61111%;
+    top:42.43478%;
+    z-index: 99;
+}
+li.rankinglist {
+    height: 9%;
+    width: 90%;
+    margin-left: 3%;
+    border-bottom: 1px solid white;
+    color: #f3f9ff;
+}
+li.rankinglist span {
+    display: inline-block;
+    margin-top: -2%;
+}
+span.rankings {
+    width: 23%;
+    margin-left: 11%;
+}
+span.rankingnickname {
+    width: 40%;
+}
+span.rankingscore {
+    width: 24%;
+    text-align: center;
+}
+.racing{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+}
+

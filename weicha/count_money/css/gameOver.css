@@ -1,0 +1,97 @@
+.content3,.content4{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    /*overflow: hidden;*/
+}
+.gameScores{
+    color: white;
+    font-size: 4rem;
+    font-weight: bolder;
+    position: absolute;
+    top:23%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+.gameWords{
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top:33%;
+    left:50%;
+    transform: translate(-50%,0);
+
+    font-size: .8rem;
+}
+.gameText{
+    width: 70%;
+    color: red;
+    font-size: .8rem;
+    position: absolute;
+    text-align: center;
+    top:38%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+.abtn{
+    width: 27.8125%;
+    height:16.72535%;
+
+    position: absolute;
+    top:56.51408%;
+
+
+    -webkit-animation: Btn 1s linear infinite;
+
+}
+.abtn img{
+    width: 100%;
+    height:100%;
+}
+.again{
+    left:15.9375%;
+}
+.share{
+    left:59.0625%;
+    -webkit-animation: Btn 1s linear infinite;
+
+}
+
+@-webkit-keyframes Btn {
+    from{
+        transform: scale3d(1, 1, 1);
+    }
+
+    50%{
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+.cmn{
+    width: 21.5625%;
+    height:10.12323%;
+
+    position: absolute;
+    top:50%;
+    left: 59.0625%;
+}
+.content4{
+    background-color: rgba(0,0,0,.7);
+    z-index: 2;
+}
+.shareImg{
+    width: 49.21875%;
+    height:21.47887%;
+
+    position: absolute;
+    top:1%;
+    right: 1%;
+}
+

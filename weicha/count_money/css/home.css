@@ -1,0 +1,252 @@
+.user-id{
+    display: none;
+}
+.wrap{
+    background: url("../img/img1/bg.png")no-repeat;
+    background-size:100% 100%;
+    position: relative;
+    /*overflow: hidden;*/
+}
+.text1{
+    width: 71%;
+    height: 14.44933%;
+    position: absolute;
+    left: 11.79577%;
+    top: 12.58802%;
+
+    -webkit-animation: text1Show 1s;
+}
+@-webkit-keyframes text1Show {
+    from{
+        transform: scale3d(0, 0, 0);
+    }
+
+    50%{
+        transform: scale3d(0, 0, 0);
+    }
+
+    55%, 60% {
+        transform: scale3d(.9, .9, .9);
+    }
+
+    70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    80% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+.text2{
+    width: 97%;
+    height: 18.48591%;
+    position: absolute;
+    left: 0;
+    top: 25.353%;
+
+    -webkit-animation: swing 1s;
+}
+.startBtn{
+    width: 36.5625%;
+    height: 20.59859%;
+    position: absolute;
+    left: 30.3125%;
+    top: 59.15492%;
+
+    -webkit-animation: startBtn 1s linear infinite;
+}
+@-webkit-keyframes startBtn {
+    from{
+        transform: scale3d(1, 1, 1);
+    }
+
+    50%{
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+.startPoint{
+    width: 14.0625%;
+    height: 6.86619%;
+    position: absolute;
+    left: 58.125%;
+    top: 69.19014%;
+
+
+    -webkit-animation: startPointMove 1s infinite;
+
+}
+@-webkit-keyframes startPointMove {
+    from{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.btnBg{
+    /*590 135*/
+    width: 92.9%;
+    height: 11.79577%;
+    position: absolute;
+    left: 4.375%;
+    top: 83.97887%;
+    background: url("../img/img1/四个按钮背景.png")no-repeat;
+    background-size:100% 100%;
+
+    z-index: 1;
+}
+.btn0{
+    /*128 92*/
+    width: 21.69491%;
+    height: 68.14814%;
+    margin-left: 2.54237%;
+    margin-top: 2.5%;
+}
+
+
+.hiddenInfo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.7);
+    display: none;
+
+    z-index: 2;
+}
+.fillInfo{
+    /*472 502*/
+    width: 73.75%;
+    height: 44.19014%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,0);
+
+    background: url("../img/img1/资料.png") no-repeat;
+    background-size:100% 100%;
+}
+.close{
+    width: 4.84375%;
+    height: 2.27941%;
+    position: absolute;
+    left: 81%;
+    top: 17%;
+
+}
+.fillInfo input{
+    /*355 76*/
+    width: 75.21186%;
+    height: 15.13944%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    outline:none;
+
+    border: 3px solid rgb(227,49,69);
+    border-radius: 10px;
+    color: rgb(53,53,53);
+    background-color: rgb(242,187,0);
+    text-indent: 1rem;
+}
+.fillInfo input::-webkit-input-placeholder{
+    color: rgb(53,53,53);
+}
+.fillInfo input:focus{
+    border-radius: 10px;
+}
+#username{
+    top: 33.86454%;
+}
+#tel{
+    top: 52.98880%;
+}
+#sbm{
+    /*258 82*/
+    width: 54.66101%;
+    height: 16.33466%;
+    position: absolute;
+    left: 50%;
+    top: 76.49402%;
+    transform: translate(-50%,0);
+    
+}
+.textRull{
+    width: 73.75%;
+    height: 51.93661%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,0);
+
+    background: url("../img/img1/rule.png") no-repeat;
+    background-size:100% 100%;
+
+}
+.textAward{
+    width: 73.75%;
+    height: 41.93661%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,0);
+
+    background: url("../img/img1/prize.png") no-repeat;
+    background-size:100% 100%;
+}
+.text_money_list{
+    width: 73.75%;
+    height: 51.93661%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,0);
+
+    background: url("../img/img1/money_list.png") no-repeat;
+    background-size:100% 100%;
+}
+
+.text_explain{
+    width: 73.75%;
+    height: 51.93661%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,0);
+
+    background: url("../img/img1/explain.png") no-repeat;
+    background-size:100% 100%;
+}
+
+img.headImg{
+    width: 20%;
+    height: 15%;
+}
+
+li.lis{
+    list-style: none;
+    margin-bottom: 13%;
+    padding-left: 40%;
+}
+.newSc{
+    float: right;
+    padding-right: 10%;
+}
+.text_money_list li:first-of-type{
+    margin-top: 20%;
+}

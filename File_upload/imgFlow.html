@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid red;
+            overflow: hidden;
+            position: relative;
+        }
+        .wrap ul{
+            float: left;
+            width: 200px;
+            /*border: 1px solid green;*/
+            list-style: none;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .wrap ul li{
+            background-color: #ccc;
+            margin-bottom: 20px;
+            font-size: 50px;
+        }
+        .wrap ul li img{
+            width: 100%;
+        }
+        #btn1{
+            position: absolute;
+            width: 100%;
+            height: 24px;
+            bottom: 0;
+            left: 0;
+            border: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <input type="button" value="点击加载更多" id="btn1">
+</div>
+</body>
+<script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        var start = 0;
+        $("#btn1").on("click",function () {
+            $.ajax({
+                url:"imgFlow_api.php",
+                data:{
+                    start: start
+                },
+                dataType:"json",
+                success:function (data) {
+                    start +=4;
+                    console.log(data);
+                    if (data.count == 0){
+                        alert("请添加图片");
+                    }else{
+                        var imgs = data.imgs;
+                        for (var i = 0; i < imgs.length; i++){
+                            var imgObj = imgs[i];
+                            var image = new Image();
+                            image.src = imgObj.path;
+                            image.onload = function () {
+                                var minIndex = 0;
+                                var minHeight = $("ul").eq(0).height();
+                                $("ul").each(function (index) {
+                                    //找到四个ul中，最小的下标
+                                    if ($(this).height()<minHeight){
+                                        minIndex = index;
+                                        minHeight = $(this).height();
+                                    }
+                                });
+                                var liObj = $("<li></li>");
+                                liObj.append($(this));
+                                $("ul").eq(minIndex).append(liObj);
+                            }
+                        }
+                    }
+                }
+            })
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>旋风赛车</title>
+</head>
+<body>
+<canvas id="canvas" width="" height="">
+    低版本浏览器不支持
+</canvas>
+
+<!--游戏开始-->
+<script src="loading.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = document.documentElement.clientWidth;
+    canvas.height = document.documentElement.clientHeight;
+
+    //调用，传入图片对象参数，图片处理函数
+    loading({"racing":"img/racing.png","speedBtn0":"img/speedBtn0.png","speedBtn1":"img/speedBtn1.png","speedBtn2":"img/speedBtn2.png",
+                "btn_right":"img/btn_right.png","btn_left":"img/btn_left.png","car0":"img/car0.png","car1":"img/car1.png",
+                "light0":"img/light0.png","light1":"img/light1.png","light2":"img/light2.png","timer":"img/timer.png",
+                "starting_line":"img/starting_line.png","roadblock":"img/roadblock.png","roadcar0":"img/roadcar0.png","roadcar1":"img/roadcar1.png",
+                "roadcar2":"img/roadcar2.png"},
+            function(a) {
+                //图片加载的进度
+                console.log(a);
+            },main
+    );
+
+    function main() {
+
+
+
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -107,7 +107,8 @@ $arr = array("name"=>"豪哥","age"=>20);
 array_push($arr,"爱好");
 $arr["爱好"] = "破冰";
 print_r($arr);
-
+//判断数组中是否有该元素
+//in_array(元素, 数组)
 
 //sort() - 对数组进行升序排列
 //    rsort() - 对数组进行降序排列
