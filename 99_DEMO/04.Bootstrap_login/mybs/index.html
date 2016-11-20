@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	</head>
+	<body>
+	<div class="panel panel-primary">
+		 <div class="panel-heading">验证码验证</div>
+	</div>
+	 <div class="container">
+	 	  <div class="alert alert-danger" hidden="true">  
+		      
+		      <a class="close">&times;</a>
+		     <span class="glyphicon glyphicon-remove"></span> 验证码不正确
+          </div>  
+          
+           <div class="alert alert-success" hidden="true">  
+		      <a class="close">&times;</a>  
+		      <span class="glyphicon glyphicon-ok"></span>  验证成功
+          </div>
+          
+			<h3 class="page-header"><span class="glyphicon glyphicon-hand-down"></span> 请输入验证码  </h3>
+			<div class="form-horizontal">
+				<div class="form-group">
+					<div class="col-md-5">
+						<input type="text" class="form-control" placeholder="验证码"/>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-md-5">
+						<button class="btn btn-primary" id="onlogin">发送验证</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script>	
+		$('#onlogin').on('click',function(){
+			if(false){
+				$('.alert-danger').show();
+			}else{
+				$('.alert-success').show();
+			}
+			
+		})
+		$('.close').on('click',function(){
+			$(this).parent('.alert').hide();
+		})
+	</script>
+	</body>
+</html>
