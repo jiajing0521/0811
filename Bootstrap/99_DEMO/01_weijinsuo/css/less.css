@@ -1,0 +1,39 @@
+/*这是个多行注释*/
+div {
+  color: #2b669a;
+  width: 200px;
+  height: 20%;
+}
+.wrap {
+  color: #2b669a;
+}
+div {
+  width: 200px;
+}
+div ul {
+  color: #2aabd2;
+}
+div ul li {
+  font-size: 20px;
+}
+div ul > a {
+  font-size: 16px;
+}
+div ul > a:hover {
+  color: #f0ad4e;
+}
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.div1 {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.div2 {
+  width: 1920px;
+}

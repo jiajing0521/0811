@@ -1,0 +1,58 @@
+//支持单行注释，但是编译成css后，单行注释会被删掉
+
+/*这是个多行注释*/
+
+//1.变量
+
+@themeColor: #2b669a;
+@demoWidth: 200px;
+@demoHeight: 20%;
+
+div{
+  color: @themeColor;
+  width: @demoWidth;
+  height: @demoHeight;
+}
+.wrap{
+  color: @themeColor;
+}
+
+//2.嵌套
+div ul li div > a img{
+
+}
+div{
+  width: @demoWidth;
+  ul{
+    color: #2aabd2;
+    li{
+      font-size: 20px;
+    }
+    //直接子级
+    >a{
+      font-size: 16px;
+      //&相当于js里的this
+      &:hover{
+        color: #f0ad4e;
+      }
+    }
+  }
+}
+//3.函数 mixin
+//默认参数，没有传参的时候使用默认值，传参使用传入的参数
+.sizing(@border:border-box){
+  -webkit-box-sizing: @border;
+  -moz-box-sizing: @border;
+  -o-box-sizing: @border;
+  box-sizing: @border;
+}
+div{
+  .sizing();
+}
+.div1{
+  .sizing(content-box);
+}
+//输出图片大小
+.div2{
+  //width: image-width("../img/142.jpg");
+}
