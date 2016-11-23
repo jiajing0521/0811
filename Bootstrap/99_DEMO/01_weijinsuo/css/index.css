@@ -64,8 +64,6 @@ body {
   display: block;
   font-size: 30px;
 }
-
-
 /*预约*/
 .cRed{
 	color: red;
@@ -108,6 +106,18 @@ body {
 }
 .manageTabWrap{
     background-color: rgb(236,236,236);
+}
+.tab-mune{
+    border-bottom: 1px solid #dddddd;
+}
+.tab-mune a{
+    color: inherit;
+}
+.manItem{
+    border-bottom: 2px solid rgb(231,231,231);
+}
+.manItemAct{
+    border-bottom: 2px solid red;
 }
 .tab-list{
     height: 150px;
