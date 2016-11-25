@@ -26,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/99_DEMO/01_weijinsuo/teacher/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="258" column="131" lean-forward="true" selection-start-line="258" selection-start-column="131" selection-end-line="258" selection-end-column="131" />
+            <state relative-caret-position="4386">
+              <caret line="258" column="131" lean-forward="false" selection-start-line="258" selection-start-column="131" selection-end-line="258" selection-end-column="131" />
               <folding />
             </state>
           </provider>
@@ -36,8 +36,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/99_DEMO/01_weijinsuo/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="861" column="36" lean-forward="false" selection-start-line="861" selection-start-column="36" selection-end-line="861" selection-end-column="36" />
+            <state relative-caret-position="3264">
+              <caret line="223" column="66" lean-forward="false" selection-start-line="223" selection-start-column="66" selection-end-line="223" selection-end-column="66" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -56,7 +56,7 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/99_DEMO/01_weijinsuo/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="2703">
               <caret line="159" column="8" lean-forward="false" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="8" />
               <folding />
             </state>
@@ -76,8 +76,8 @@
       <file leaf-file-name="03.TAB和面包屑导航.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/99_DEMO/04.Bootstrap_login/mybs/03.TAB和面包屑导航.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="58" lean-forward="false" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
+            <state relative-caret-position="527">
+              <caret line="34" column="53" lean-forward="false" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -151,8 +151,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -455,12 +455,13 @@
       <workItem from="1479774244394" duration="13462000" />
       <workItem from="1479861986299" duration="18000" />
       <workItem from="1479862494031" duration="5416000" />
-      <workItem from="1479986271003" duration="4633000" />
+      <workItem from="1479986271003" duration="4800000" />
+      <workItem from="1480033340240" duration="1444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42141000" />
+    <option name="totallyTimeSpent" value="43752000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -891,14 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/99_DEMO/04.Bootstrap_login/mybs/03.TAB和面包屑导航.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="58" lean-forward="false" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/99_DEMO/01_weijinsuo/fonts/MiFie-Web-Font.ttf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -931,24 +924,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/99_DEMO/01_weijinsuo/teacher/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="258" column="131" lean-forward="true" selection-start-line="258" selection-start-column="131" selection-end-line="258" selection-end-column="131" />
+        <state relative-caret-position="4386">
+          <caret line="258" column="131" lean-forward="false" selection-start-line="258" selection-start-column="131" selection-end-line="258" selection-end-column="131" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/99_DEMO/01_weijinsuo/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="2703">
           <caret line="159" column="8" lean-forward="false" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/99_DEMO/04.Bootstrap_login/mybs/03.TAB和面包屑导航.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="34" column="53" lean-forward="false" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/99_DEMO/01_weijinsuo/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="861" column="36" lean-forward="false" selection-start-line="861" selection-start-column="36" selection-end-line="861" selection-end-column="36" />
+        <state relative-caret-position="3264">
+          <caret line="223" column="66" lean-forward="false" selection-start-line="223" selection-start-column="66" selection-end-line="223" selection-end-column="66" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />

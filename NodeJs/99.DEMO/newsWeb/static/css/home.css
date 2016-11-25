@@ -1,0 +1,16 @@
+/*导航*/
+.navbar-brand{
+    line-height: 0;
+}
+.navbar-logo{
+    margin-top: -8px;
+}
+
+/*新闻列表*/
+.viewCount{
+    display: inline-block;
+    width: 70px;
+    line-height: 70px;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
