@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>新闻博物馆</title>
+    <title>大航海时代</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -36,21 +36,47 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">首页</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">新闻分类 <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">正片 <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">国际新闻</a></li>
-                        <li><a href="#">国内新闻</a></li>
-                        <li><a href="#">社会新闻</a></li>
+                        <li><a href="#">001-100</a></li>
+                        <li><a href="#">101-200</a></li>
+                        <li><a href="#">201-300</a></li>
+                        <li><a href="#">301-400</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">娱乐新闻</a></li>
+                        <li><a href="#">401-500</a></li>
+                        <li><a href="#">501-600</a></li>
+                        <li><a href="#">601-700</a></li>
+                        <li><a href="#">701-800</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">体育新闻</a></li>
+                        <li><a href="#">801-900</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">剧场版 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">1.黄金岛の冒险</a></li>
+                        <li><a href="#">2.ねじまき岛の冒险</a></li>
+                        <li><a href="#">3.珍兽岛のチョッパー王国</a></li>
+                        <li><a href="#">4.デッドエンドの冒险</a></li>
+                        <li><a href="#">5.咒われた圣剑</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">6.オマツリ男爵と秘密の岛</a></li>
+                        <li><a href="#">7.カラクリ城のメカ巨兵</a></li>
+                        <li><a href="#">8.沙漠の王女と海贼たち</a></li>
+                        <li><a href="#">9.冬に咲く、奇迹の樱</a></li>
+                        <li><a href="#">10.ONE PIECE FILM STRONG WORLD</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">11.ONE PIECE 3D 麦わらチェイス</a></li>
+                        <li><a href="#">12.ONE PIECE FILM Z</a></li>
+                        <li><a href="#">13.ONE PIECE FILM GOLD</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="nav navbar-nav navbar-right">
-                <button type="button" class="btn btn-default navbar-btn">上传</button>
-                <button type="button" class="btn btn-default navbar-btn">登录</button>
+                <button type="button" class="btn btn-default navbar-btn">
+                	<a href="/upload">上传</a>
+                </button>
+                <!--<button type="button" class="btn btn-default navbar-btn">登录</button>-->
             </div>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -59,40 +85,62 @@
 <div class="content">
     <div class="container">
         <div class="row">
-            <!--新闻列表-->
+            <!--概览列表-->
             <div class="col-md-8 col-sm-8 col-xs-8">
                 <div class="row">
-                    <div class="col-sm-12 col-md-12">
-                        <div class="thumbnail">
-                            <img data-src="holder.js/300x300" alt="...">
-                            <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>...</p>
-                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                	<% news.forEach((item)=>{ %>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="media">
+                            <div class="media-left media-middle pull-left" href="#">
+                                <!--<a class="viewCount" href="/news/id">浏览<= news[viewCount] ></a>-->
+                                <p class="viewCount">浏览<%= item.viewCount%></p>
+                            </div>
+                            <div class="media-body pull-left">
+                    			<a href="/detail/<%= item.id %>">
+                                	<h4 class="media-heading"><%= item.title %></h4>
+                                	<p class="line-limit-length"><%= item.content %></p>
+                    			</a>
+                            </div>
+                            <div class="media-right media-middle pull-right">
+                                <a href="/detail/<%= item.id %>"><img class="img-responsive" src="<%= item.img %>" alt=""></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 col-sm-12">
-                        <a href="javascript:void(0)">
-                            <div class="media">
-                                <div class="media-left media-middle pull-left" href="#">
-                                    <!--<a class="viewCount" href="/news/id">浏览<= news[viewCount] ></a>-->
-                                    <p class="viewCount">浏览21</p>
-                                </div>
-                                <div class="media-body pull-left">
-                                    <h4 class="media-heading">支付交易保证</h4>
-                                    <p>银联支付全程保障资金安全</p>
-                                </div>
-                                <div class="media-right media-middle pull-right" href="#">
-                                    <a href="/news/id"><img src="img/logo.png" alt=""></a>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                    <% }) %>
                 </div>
             </div>
-            <!--广告-->
-            <div class="col-md-4 col-sm-4 col-xs-4"></div>
+            <!--简介-->
+            <div class="col-md-4 col-sm-4 col-xs-4">
+            	<div class="thumbnail">
+			        <img class="img-responsive img-thumbnail" src="img/introduce.jpg" data-src="holder.js/300x300" alt="...">
+			        <div class="caption">
+			        	<h2>海贼王<sub>1999年</sub></h2>
+			        	<div class="row">
+			        		<div class="col-xs-6 text-left">
+								<dt class="small">地区：</dt>
+								<dd >日漫</dd>
+							</div>
+							<div class="col-xs-6 text-left">
+								<dt class="small">类型：</dt>
+								<dd>动作/热血/冒险/魔幻/励志 </dd>
+							</div>
+			        		<div class="col-xs-6 text-left">
+								<dt class="small">配音：</dt>
+								<dd >田中真弓/中井和哉/平田...</dd>
+							</div>
+							<div class="col-xs-6 text-left">
+								<dt class="small">集数：</dt>
+								<dd><a href="http://www.iqiyi.com/v_19rra471x0.html">更新至765</a></dd>
+							</div>
+							<div class="col-xs-12 text-left">
+								<dt class="small">简介：</dt>
+								<dd>生长在东海风车村的路飞受到海贼香克斯的精神指引，决定成为一名出色的海贼。为了达成这个目标，并找到万众瞩目的One Piece，路飞踏上艰苦的旅程。一路上他遇到了无数磨难，也结识了索隆、娜美、乌索普、山治、罗宾等一众性格各异的好友。他们携手一同展开充满传奇色彩的大冒险。 </dd>
+							</div>
+			        	</div>
+			        	<p><a href="http://www.iqiyi.com/v_19rra471x0.html" class="btn btn-primary" role="button">立即播放</a></p>
+			        </div>
+			    </div>
+            </div>
         </div>
     </div>
 </div>
