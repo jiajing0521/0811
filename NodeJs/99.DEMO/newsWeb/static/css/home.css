@@ -1,3 +1,15 @@
+a{
+    color: #0f0f0f;
+}
+a:hover{
+    text-decoration: none;
+}
+dt{
+    margin-top: 10px;
+}
+body{
+    padding-top: 80px;
+}
 /*导航*/
 .navbar-brand{
     line-height: 0;
@@ -5,18 +17,57 @@
 .navbar-logo{
     margin-top: -8px;
 }
-
+.navbar-brand>img {
+    display: block;
+    height: 50px;
+    margin-top: -15px;
+}
+.uploadBtn{
+    color: white;
+}
+.uploadBtn:hover{
+    color: white;
+}
 /*新闻列表*/
+.mediaListWrap{
+
+}
 .viewCount{
     display: inline-block;
     width: 70px;
     line-height: 70px;
+    border-radius: 10px;
     border: 1px solid #dddddd;
     text-align: center;
+    font-size: 12px;
 }
 .line-limit-length {
-	overflow: hidden;
+	/*overflow: hidden;*/
 	text-overflow: ellipsis;
 	/*文本不换行，这样超出一行的部分被截取，显示...*/
-	white-space: nowrap; 
+	/*white-space: nowrap; */
+}
+.mediaList{
+    margin-top: 20px;
+    border-bottom: 1px dashed #ddd;
+}
+.updatetime{
+    padding-top: 10px;
+}
+/*.media{*/
+    /*height: 100px;*/
+/*}*/
+/*.img-responsive{*/
+    /*width: 200px;*/
+/*}*/
+
+/*简介*/
+.blue{
+    color: blue;
+}
+.blue:hover{
+    color: red;
+}
+.playBtn{
+    margin-top: 20px;
 }

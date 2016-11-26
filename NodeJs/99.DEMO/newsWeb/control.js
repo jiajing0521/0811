@@ -27,11 +27,11 @@ app.use(express.static("static"));
 
 //home
 app.get("/",(req,res)=>{
-	connect.query("SELECT * FROM news ORDER BY time LIMIT 5",(err,rows,field)=>{
+	connect.query("SELECT * FROM news ORDER BY time DESC LIMIT 5",(err,rows,field)=>{
 		if(err){
 			throw err;
 		}
-		res.render(path.join(__dirname,"views/home.ejs"),{
+		res.render(path.join(__dirname,"views/body_home.ejs"),{
 			news:rows
 		});
 	})
@@ -39,12 +39,12 @@ app.get("/",(req,res)=>{
 
 //detail
 app.get("/detail/:id",(req,res)=>{
-	connect.query(`SELECT * FROM news WHERE id = ${res.params.id}`,(err,rows,fiels)=>{
+	connect.query("SELECT * FROM news WHERE id = "+req.params.id,(err,rows,field)=>{
 		if(err){
 			throw err;
 		}
 		res.render(path.join(__dirname,"views/detail.ejs"),{
-			new: row[0]
+			new: rows[0]
 		})
 	})
 });
@@ -54,6 +54,6 @@ app.post("/upload",(req,res)=>{
 	res.render(path.join(__dirname,"views/upload.ejs"),{
 			
 		})
-})
+});
 
 app.listen(8888);

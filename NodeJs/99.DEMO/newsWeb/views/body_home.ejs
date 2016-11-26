@@ -1,0 +1,43 @@
+<% include header.ejs)%>
+<div class="content">
+    <div class="container">
+        <div class="row ">
+            <!--概览列表-->
+            <div class="col-md-9 ">
+                <!--<div class="row">-->
+                <% news.forEach((item)=>{ %>
+                <div class="row mediaList">
+                    <div class="media">
+                        <div class="col-sm-2 col-xs-3">
+                            <div class="media-left media-middle" href="#">
+                                <!--<a class="viewCount" href="/news/id">浏览<= news[viewCount] ></a>-->
+                                <p class="viewCount ">浏览<%= item.viewCount%></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-7 col-xs-6">
+                            <div class="media-body media-middle">
+                                <a href="/detail/<%= item.id %>">
+                                    <h4 class="media-heading"><%= item.chapter %></h4>
+                                    <p class="line-limit-length"><%= item.title %></p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-3">
+                            <div class="media-right media-middle">
+                                <a href="/detail/<%= item.id %>"><img class="img-responsive img-thumbnail" src="<%= item.img %>" alt=""></a>
+                                <p class="small updatetime">更新时间： <%= item.time %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+                <!--</div>-->
+            </div>
+            <!--简介-->
+            <% include body_common.ejs)%>
+
+        </div>
+    </div>
+</div>
+
+<% include footer.ejs)%>
