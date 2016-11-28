@@ -1,10 +1,22 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>Document</title>
-</head>
-<body>
-	<h1>这是upload</h1>
-</body>
-</html>
+<% include header.ejs %>
+
+<div class="content">
+	<div class="container">
+		<div class="row ">
+			<!--概览列表-->
+			<div class="col-md-9 ">
+				<form action="/" method="post" enctype="multipart/form-data">
+					章节 <input type="text" name="chapter"> <br>
+					标题 <input type="text" name="title"> <br>
+					正文 <textarea type="text" name="content" rows="5" style="margin-top: 20px"> </textarea> <br>
+					<input type="file" name="file">
+					<input type="submit">
+				</form>
+			</div>
+			<!--简介-->
+            <% include body_common.ejs %>
+		</div>
+	</div>
+</div>
+
+<% include footer.ejs %>

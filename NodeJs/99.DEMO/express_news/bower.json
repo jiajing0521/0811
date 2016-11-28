@@ -1,0 +1,21 @@
+{
+  "name": "express_news",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "dllo <757959688@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jiajing0521/0811",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}

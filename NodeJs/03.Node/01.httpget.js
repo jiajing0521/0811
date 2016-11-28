@@ -11,10 +11,15 @@ const queryString = require("querystring");
 //    })
 // });
 
+//对象转为字符串
+// 转为u=jk&p=88
 var bodyStr = queryString.stringify({
     username: "JK",
     password: "888"
 });
+//字符串转为对象
+// 转为{name:'jk',pass:888}
+queryString.parser("name=jk&pass=888");
 
 var options = {
     hostname: "localhost",

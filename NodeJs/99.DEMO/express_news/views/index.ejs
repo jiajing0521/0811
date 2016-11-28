@@ -1,0 +1,37 @@
+<% include header.ejs %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <% rows.forEach((item)=>{ %>
+            <div class="thumbnail">
+                <img src="<%= item.imgpath %>" alt="...">
+                <div class="caption">
+                    <h3><%= item.title %></h3>
+                    <p><%= item.content %></p>
+                    <p><a href="/detail/<%= item.id %>" class="btn btn-primary" role="button">查看详情</a><span class="pull-right"> 浏览<%= item.pv %></span></p>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img data-src="holder.js/300x300" alt="...">
+                <div class="caption">
+                    <h3>VR才是网络游戏的未来</h3>
+                    <p>
+                        英媒：中国东北面临人口危机 高学历人才大量流失
+                        英媒关注中国整顿“国际学校”：小留学生或增多
+                        广西灵婉湖"鱼王"遭猎杀 引发当地人愤怒
+                        日媒：陆上自卫队网络系统遭黑客入侵 或有信息外泄
+                        东航"摆渡车险撞飞机"：或是刹车过猛致乘客摔倒
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<% include footer.ejs %>
+

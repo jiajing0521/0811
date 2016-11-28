@@ -1,10 +1,22 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>Document</title>
-</head>
-<body>
-	<h1>这是detail</h1>
-</body>
-</html>
+<% include header.ejs %>
+
+<div class="content">
+	<div class="container">
+		<div class="row ">
+			<!--概览列表-->
+			<div class="col-md-9 ">
+				<!--<div class="row">-->
+				<img src="<%= newList["img"] %>" alt="">
+				<div>
+					<h3><%= newList["chapter"] %></h3>
+					<h4><%= newList["title"] %></h4>
+					<p><%= newList["content"] %></p>
+				</div>
+			</div>
+			<!--简介-->
+            <% include body_common.ejs %>
+		</div>
+	</div>
+</div>
+
+<% include footer.ejs %>

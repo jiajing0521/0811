@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab442dd9-ac7c-4158-9f15-53428924eb1d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bootstrap/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Bootstrap/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NodeJs/.idea/workspace.xml" afterPath="$PROJECT_DIR$/NodeJs/.idea/workspace.xml" />
     </list>
     <ignored path="0811.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,12 +23,12 @@
     <favorites_list name="0811" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Bootstrap/99_DEMO/01_weijinsuo/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,7 +54,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/NodeJs/01.Node/node_modules" />
+    <handled-path value="$PROJECT_DIR$/NodeJs/03.Node/node_modules" />
+    <handled-path value="$PROJECT_DIR$/NodeJs/04.gulp/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -216,11 +217,12 @@
       <workItem from="1479467060335" duration="616000" />
       <workItem from="1479861420575" duration="2000" />
       <workItem from="1479861435043" duration="227000" />
+      <workItem from="1480145611451" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7984000" />
+    <option name="totallyTimeSpent" value="7991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="311" y="25" width="1602" height="975" extended-state="0" />
@@ -264,6 +266,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Bootstrap/99_DEMO/01_weijinsuo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/99_DEMO/count_money/home.php" />
     <entry file="file://$PROJECT_DIR$/99_DEMO/count_money/css/home.css" />
     <entry file="file://$PROJECT_DIR$/PHP/php1_basic/01_basic.php">
@@ -291,8 +301,8 @@
     <entry file="file://$PROJECT_DIR$/99_DEMO/count_money/home.php" />
     <entry file="file://$PROJECT_DIR$/Bootstrap/99_DEMO/01_weijinsuo/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>

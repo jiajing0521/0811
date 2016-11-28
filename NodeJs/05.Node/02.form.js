@@ -15,11 +15,13 @@ app.set("view engine","ejs");
 // app.set("views","./views");
 
 //解析post发送的body 的请求体的格式1的第三方模块
-// parse application/x-www-form-urlencoded
+// form中enctype如果是 application/x-www-form-urlencoded
+// 'name=jk&pass=888'=>对象
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //解析post发送的body 的请求体的格式2的第三方模块
-// parse application/json
+// form中enctype如果是 application/json
+//'{xx:cc}'=>对象
 app.use(bodyParser.json());
 
 //设置静态目录，这个目录下的文件直接通过路径即可访问，不需要单独写路径，
@@ -32,8 +34,10 @@ app.get("/form",(req,res)=>{
 });
 
 app.post("/form",(req,res)=>{
+    // req.body是对象格式
    console.log(req.body);
    // res.send("收到");
+    //发给前端时，应该是字符串，所以应该通过res.json(req.body)把对象转换为'{}'字符串格式
    res.json(req.body);
 });
 
