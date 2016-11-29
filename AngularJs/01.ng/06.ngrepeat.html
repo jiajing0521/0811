@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [ng-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+
+<ul ng-init="arr=[1,2,3]">
+    <li ng-repeat="x in arr" ng-cloak><span>{{$first?"第一行":""}}</span>{{x}}</li>
+</ul>
+<ul ng-controller="ListController">
+    <li ng-repeat="(key,value) in list[0]">{{key}} <span>:{{value}}</span> </li>
+    <li ng-repeat="(key,value) in list" ng-cloak> <span>key="{{key}}";</span> <span>value:"{{value}}";</span> {{value.name}}<span>:{{value.like}}</span></li>
+</ul>
+
+<script src="../bower_components/angular/angular.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var app = angular.module("myApp",[]);
+    app.controller("ListController",['$scope',function ($scope) {
+        $scope.list=[
+            {
+                name: "JK1",
+                like: "haha1"
+            },{
+                name: "JK2",
+                like: "haha2"
+            },{
+                name: "JK3",
+                like: "haha3"
+            },{
+                name: "JK4",
+                like: "haha4"
+            },{
+                name: "JK5",
+                like: "haha5"
+            },{
+                name: "JK6",
+                like: "haha6"
+            }
+        ]
+    }])
+</script>
+</body>
+</html>

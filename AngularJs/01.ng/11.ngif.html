@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app ng-init="show=true">
+
+
+<!--和ng-hide的区别-->
+    <!--ng-hide 使用display:none来隐藏对象-->
+    <!--ng-if 会直接删除DOM元素-->
+<p ng-if="show">这是JK</p>
+<input type="button" value="点" ng-click="show=!show">
+<script src="../bower_components/angular/angular.js" type="text/javascript"></script>
+</body>
+</html>

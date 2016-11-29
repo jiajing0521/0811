@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shopping cart</title>
+    <style>
+        [type='text']{
+            text-align: center;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="all" ng-app="myApp" ng-controller="MyController">
+    <h1>我的购物车</h1>
+    <table border="1" ng-init="allC=false">
+        <th><input type="checkbox" ng-checked="allC" ng-click="chooseAll()" ng-model="allC">全选/取消全选</th>
+        <th>名称</th>
+        <th>数量</th>
+        <th>单价</th>
+        <th>价格</th>
+
+        <tr ng-repeat=" item in shoppingList">
+            <td><input type="checkbox"  ng-model="item.choosed" ng-checked="item.choosed"></td>
+            <td>{{item.name}}</td>
+            <td>
+                <input type="text" ng-model="item.count" ng-change="Del()">
+                <input type="button" value="+" ng-click="item.count = item.count+1">
+                <input type="button" value="-" ng-click="item.count = item.count-1">
+            </td>
+            <td>{{item.unitPrice}}</td>
+            <td>{{item.unitPrice*item.count}}</td>
+        </tr>
+    </table>
+    <p>总价格:{{totalPrices()}}</p>
+</div>
+
+<script src="../../bower_components/angular/angular.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var app = angular.module("myApp",[]);
+    app.controller("MyController",["$scope",function ($scope) {
+        $scope.shoppingList = [{
+            name : "洗衣机",
+            count: 1,
+            unitPrice: 900,
+            choosed: false
+        },{
+            name : "热水器",
+            count: 1,
+            unitPrice: 110,
+            choosed: false
+        },{
+            name : "空调",
+            count: 1,
+            unitPrice: 116,
+            choosed: false
+        },{
+            name : "冰箱",
+            count: 1,
+            unitPrice: 2087,
+            choosed: false
+        },{
+            name : "电磁炉",
+            count: 1,
+            unitPrice: 135,
+            choosed: false
+        },{
+            name : "被子",
+            count: 1,
+            unitPrice: 50,
+            choosed: false
+        },{
+            name : "本子",
+            count: 1,
+            unitPrice: 2,
+            choosed: false
+        },{
+            name : "笔",
+            count: 1,
+            unitPrice: 115,
+            choosed: false
+        },{
+            name : "杯子",
+            count: 1,
+            unitPrice: 12,
+            choosed: false
+        },{
+            name : "书",
+            count: 1,
+            unitPrice: 5,
+            choosed: false
+        },{
+            name : "零食",
+            count: 1,
+            unitPrice: 13,
+            choosed: false
+        }];
+
+        //计算总价
+        $scope.totalPrices = function () {
+            var prices = 0;
+            angular.forEach($scope.shoppingList, function (obj) {
+                console.log($scope.choosed);
+                prices += obj.choosed? obj.unitPrice*obj.count : 0;
+            });
+            return prices;
+        };
+        //全选反选
+
+        var count = 0;
+        $scope.chooseAll = function () {
+            count++;
+            if (count%2 == 1){
+                angular.forEach($scope.shoppingList, function (obj) {
+                    obj.choosed=true;
+                });
+            }else {
+                angular.forEach($scope.shoppingList, function (obj) {
+                    obj.choosed=false;
+                });
+            }
+        }
+        
+        //减少到0时,删除
+        $scope.Del = function () {
+            angular.forEach($scope.shoppingList, function (obj) {
+                if (item.count ==0){
+                    $scope.shoppingList.splice();
+                }
+            });
+        }
+
+    }])
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="JkController">
+    <h2>{{content}}</h2>
+</div>
+
+<script src="../bower_components/angular/angular.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var app = angular.module("myApp",[]);
+    app.controller("JkController",['$scope','$http',function ($scope,$http) {
+        //就是Ajax
+        $http.get("15.json").success(function (data) {
+            console.log(data,typeof data);
+            $scope.content = data.name;
+        })
+    }])
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngcontroller</title>
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="MyController">
+    <input type="button" value="点击" ng-click="click()">
+</div>
+
+
+<script src="../bower_components/angular/angular.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var app = angular.module("myApp",[]);
+//    app.controller("MyController",function ($scope) {
+//        $scope.click = function () {
+//            alert("恩");
+//        }
+//    });
+    //依赖注入,第二个参数为一个数组,数组中前面的元素是告诉controller要注入哪些变量,最后一个元素是之前正常的函数
+    app.controller("MyController",["$scope",function (a) {
+        a.click = function () {
+            alert("xx");
+        }
+    }])
+</script>
+</body>
+</html>

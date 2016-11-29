@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-app="myApp">
+
+<btn>按钮哈</btn>
+
+<script src="../bower_components/angular/angular.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var app = angular.module("myApp",[]);
+    //创建指令
+    var a = app.directive("btn", [function () {
+        return {
+            replace : true,//去掉自定义模板的btn标签
+            //设置模板内可以填文字
+            transclude:true,
+            //定义模板的内容
+            template: "<button class='btn btn-primary' ng-transclude></button>"
+        }
+    }])
+
+    document.documentElement.appendChild(a);
+
+</script>
+</body>
+</html>

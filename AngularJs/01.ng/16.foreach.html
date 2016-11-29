@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="MyController"></div>
+
+<script src="../bower_components/angular/angular.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var app = angular.module('myApp', []);
+    app.controller("MyController",["$scope",function ($scope) {
+        $scope.arr = ["JK","JJ","haha","houhou"];
+        angular.forEach($scope.arr,function(item){
+            console.log(item);
+        });
+        angular.forEach({
+            name: "JK",
+            age : 20,
+            sex: 1
+        },function(value,key){
+
+            console.log(value,key);
+        })
+    }])
+</script>
+
+</body>
+</html>

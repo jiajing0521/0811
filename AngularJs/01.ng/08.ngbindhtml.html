@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp" ng-init="name='<h1>哈哈哈</h1>'">
+
+<!--<input type="text" np-model="name">-->
+<p ng-bind-html="name"></p>
+
+<script src="../bower_components/angular/angular.js" type="text/javascript"></script>
+<script src="../bower_components/angular-sanitize/angular-sanitize.js" type="text/javascript"></script>
+<script type="text/javascript">
+    //ngSanitize是app使用的依赖
+    var app = angular.module("myApp",['ngSanitize']);
+
+</script>
+</body>
+</html>
