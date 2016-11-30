@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+    <title>saveUser</title>
+    <style>
+        [ng-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap" ng-app="myApp" ng-controller="UserController">
+    <div class="container">
+        <h1>Users</h1>
+
+        <table class="table table-striped">
+            <tr></tr>
+            <tr>
+                <th>编辑</th>
+                <th>姓</th>
+                <th>名</th>
+            </tr>
+
+            <tr ng-repeat=" user in users" ng-cloak>
+                <td><button ng-click="editUser($index)" type="button" class="btn btn-default btn-xs"> <i class="glyphicon glyphicon-pencil"></i> 编辑</button></td>
+                <td>{{user.familyName}}</td>
+                <td>{{user.givenName}}</td>
+            </tr>
+
+        </table>
+        <hr>
+        <button ng-click="editNewUser()" type="button" class="btn btn-success btn-lg"> <i class="glyphicon glyphicon-user"></i> 创建新用户</button>
+        <hr>
+        <h1>编辑用户</h1>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">姓:</label>
+                <div class="col-sm-10">
+                    <input ng-model="FN_val" ng-disabled="canWrite" type="text" class="form-control" id="inputEmail3" placeholder="请输入姓">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">名:</label>
+                <div class="col-sm-10">
+                    <input ng-model="GN_val" ng-disabled="canWrite" type="text" class="form-control" id="inputPassword3" placeholder="请输入名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword4" class="col-sm-2 control-label">密码:</label>
+                <div class="col-sm-10">
+                    <input ng-model="PW_val1" type="text" class="form-control" id="inputPassword4" placeholder="请输入密码">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword5" class="col-sm-2 control-label">重复密码</label>
+                <div class="col-sm-10">
+                    <input ng-model="PW_val2" type="text" class="form-control" id="inputPassword5" placeholder="请再次输入密码">
+                </div>
+            </div>
+        </form>
+        <hr>
+        <button ng-disabled="saveBtnDisabled()" ng-click="saveInfo()" type="button" class="btn btn-success btn-lg"> <i class="glyphicon glyphicon-download-alt"></i> 保存</button>
+    </div>
+</div>
+
+<script src="../../bower_components/angular/angular.js" type="text/javascript"></script>
+<script src="../../bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+<script type="text/javascript">
+    
+    angular.module("myApp",[]).controller("UserController",["$scope",function ($scope) {
+        $scope.users = [{
+            familyName : "刘",
+            givenName : "晟鑫"
+        },{
+            familyName : "于",
+            givenName : "嘉晨"
+        },{
+            familyName : "董",
+            givenName : "舒羽"
+        }];
+
+        //保存按钮失效
+        $scope.FN_val = "";
+        $scope.GN_val = "";
+        $scope.PW_val1 = "";
+        $scope.PW_val2 = "";
+        $scope.saveBtnDisabled = function () {
+            if ($scope.FN_val!="" && $scope.GN_val!="" && $scope.PW_val1!="" && $scope.PW_val2!="" && $scope.PW_val1==$scope.PW_val2){
+                return false;
+            }else{
+                return true;
+            }
+        };
+        //保存按钮
+        var canAdd = true;
+        $scope.saveInfo = function () {
+            var newUser = {
+                familyName : $scope.FN_val,
+                givenName : $scope.GN_val
+            };
+            angular.forEach($scope.users,function (user) {
+                if (newUser.familyName == user.familyName && newUser.givenName == user.givenName){
+                    canAdd = false;
+                    if (!$scope.canWrite){
+                        alert("你输入的姓名已存在,请重新编辑!!! \n提示:如果你想修改该用户的密码,请点击编辑按钮!!");
+                    }
+                }else{
+                    canAdd = true;
+                }
+            });
+            if (canAdd){
+                $scope.users.push(newUser);
+                $scope.editNewUser();
+            }
+        };
+        //编辑新用户按钮
+        $scope.editNewUser = function () {
+            $scope.FN_val = "";
+            $scope.GN_val = "";
+            $scope.PW_val1 = "";
+            $scope.PW_val2 = "";
+            $scope.canWrite = false;
+            canAdd = true;
+        };
+        //编辑用户按钮
+        $scope.canWrite = false;
+        $scope.editUser = function (index) {
+            $scope.FN_val = $scope.users[index].familyName;
+            $scope.GN_val = $scope.users[index].givenName;
+            $scope.PW_val1 = "";
+            $scope.PW_val2 = "";
+            $scope.canWrite = true;
+            canAdd = false;
+        }
+
+
+
+
+
+    }])
+</script>
+</body>
+</html>

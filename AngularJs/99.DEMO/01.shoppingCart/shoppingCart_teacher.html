@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [type='text']{
+            text-align: center;
+            width: 30px;
+        }
+        [ng-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body ng-app="ShopApp">
+
+    <div ng-controller="ShowController">
+        <table border="1" cellpadding="10">
+            <tr>
+                <th><input type="checkbox" ng-checked="allSelect" ng-click="selectAll()">全选/取消全选</th>
+                <th>名字</th>
+                <th>数量</th>
+                <th>单价</th>
+                <th>总价</th>
+            </tr>
+
+            <tr ng-repeat="good in products" ng-cloak>
+                <td><input type="checkbox" ng-model="good.check"></td>
+                <td>{{good.title}}</td>
+                <td>
+                    <input type="text" ng-model="good.count" ng-change="good.check = good.count>0?true:false">
+                    <input type="button" value="+" ng-click="good.count = good.count + 1;good.check=true">
+                    <input type="button" value="-" ng-click="subtraction($index);good.check= good.count>0? true: false">
+                </td>
+                <td>{{good.price}}</td>
+                <td>{{good.count * good.price}}</td>
+            </tr>
+        </table>
+        <h3>总价:{{totalPrices()}}</h3>
+    </div>
+<script src="../../bower_components/angular/angular.js" type="text/javascript"></script>
+<script type="text/javascript">
+    angular.module("ShopApp",[]).controller("ShowController",["$scope",function ($scope) {
+        $scope.products = [{
+            check: false,
+            title: "洗衣机",
+            count: 0,
+            price: 900
+        },{
+            check: false,
+            title: "冰箱",
+            count: 0,
+            price: 500
+        },{
+            check: false,
+            title: "电视机",
+            count: 0,
+            price: 1200
+        },{
+            check: false,
+            title: "笔记本电脑",
+            count: 0,
+            price: 5999
+        },{
+            check: false,
+            title: "微波炉",
+            count: 0,
+            price: 2666
+        },{
+            check: false,
+            title: "录音机",
+            count: 0,
+            price: 1999
+        },{
+            check: false,
+            title: "热水器",
+            count: 0,
+            price: 3999
+        }];
+        //减号的方法
+        $scope.subtraction = function (index) {
+            $scope.products[index].count--;
+            if ($scope.products[index].count < 0){
+                var canRemove =  confirm("是否确定删除此商品");
+                if (canRemove){
+                    $scope.products.splice(index,1);
+                }else {
+                    $scope.products[index].count = 0;
+                    $scope.products[index].check = false;
+                }
+            }
+        };
+        //总价
+        $scope.totalPrices = function () {
+            var totalPrice = 0;
+            angular.forEach($scope.products,function (good) {
+                totalPrice += good.check? good.count*good.price : 0;
+            });
+            return totalPrice;
+        }
+        //全选
+        $scope.allSelect = false;
+        //全选的点击事件
+        $scope.selectAll = function () {
+            $scope.allSelect = !$scope.allSelect;
+            if ($scope.allSelect){
+                angular.forEach($scope.products,function (good) {
+                    good.check = true;
+                });
+            }else {
+                angular.forEach($scope.products,function (good) {
+                    good.check = false;
+                });
+            }
+        }
+    }])
+</script>
+</body>
+</html>
