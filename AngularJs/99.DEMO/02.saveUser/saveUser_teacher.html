@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-app="myApp">
+
+<div class="container" ng-controller="myController">
+    <div class="page-header">
+        <h1>Users</h1>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>编辑</th>
+            <th>姓</th>
+            <th>名</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in users">
+            <td>
+                <button ng-click="edit($index)" class="btn btn-default">
+                    <span class="glyphicon glyphicon-pencil"></span>编辑
+                </button>
+            </td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <hr>
+    <button ng-click="createUser()" class="btn btn-default btn-success" >
+        <span class="glyphicon glyphicon-user"></span>创建新用户
+    </button>
+    <hr>
+    <h2 ng-show="isCreate">创建新用户</h2>
+    <h2 ng-hide="isCreate">编辑用户</h2>
+
+    <form action="" class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-1">姓:</label>
+            <div class="col-sm-11">
+                <input ng-model="firstName" ng-disabled="!isCreate" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-1">名:</label>
+            <div class="col-sm-11">
+                <input ng-model="lastName" ng-disabled="!isCreate" type="text"  class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-1">密码:</label>
+            <div class="col-sm-11">
+                <input ng-model="pass1" type="text" class="form-control" ng-model="passw1">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-1">重复密码:</label>
+            <div class="col-sm-11">
+                <input ng-model="pass2" type="text" class="form-control">
+            </div>
+        </div>
+    </form>
+    <hr>
+    <button ng-click="save()" ng-disabled="canSave()" class="btn btn-default btn-success">
+        <span class="glyphicon glyphicon-save"></span>保存
+    </button>
+</div>
+
+<script src="../../bower_components/angular/angular.js" type="text/javascript"></script>
+<script src="../../bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+<script type="text/javascript">
+    angular.module("myApp",[]).controller("myController",['$scope',function ($scope) {
+
+        $scope.users = [{
+            firstName: "李",
+            lastName: "威",
+            password: "123"
+        },{
+            firstName: "刘",
+            lastName: "晟鑫",
+            password: "852"
+        },{
+            firstName: "于",
+            lastName: "嘉晨",
+            password: "666"
+        }];
+        //文字切换
+        $scope.isCreate = true;
+
+        //编辑事件
+        //记录编辑的下标
+        var currentIndex = -1;
+        $scope.firstName = '';
+        $scope.lastName = '';
+        $scope.pass1 = '';
+        $scope.pass2 = '';
+        $scope.edit = function (index) {
+            //文字切换
+            $scope.isCreate = false;
+            reset();
+            $scope.firstName = $scope.users[index].firstName;
+            $scope.lastName = $scope.users[index].lastName;
+            currentIndex = index;
+        };
+        //保存
+        $scope.save = function () {
+            //保存新用户时
+            if ($scope.isCreate){
+                $scope.users.push({
+                    firstName : $scope.firstName,
+                    lastName : $scope.lastName,
+                    password : $scope.pass1
+                });
+             //保存当前编辑用户
+            }else{
+                $scope.users[currentIndex].firstName = $scope.firstName;
+                $scope.users[currentIndex].lastName = $scope.lastName;
+                $scope.users[currentIndex].password = $scope.pass1;
+                $scope.isCreate = true;
+            }
+            reset();
+        };
+        //创建新用户的点击事件
+        $scope.createUser = function () {
+            $scope.isCreate = true;
+            reset();
+        };
+        //保存按钮的点击状态
+        $scope.canSave = function () {
+            return   !($scope.firstName.length > 0 && $scope.lastName.length > 0 && $scope.pass1.length > 0 && $scope.pass1 == $scope.pass2);
+        };
+        //清空函数
+        function reset() {
+            $scope.firstName = '';
+            $scope.lastName = '';
+            $scope.pass1 = '';
+            $scope.pass2 = '';
+        }
+    }])
+</script>
+</body>
+
+</html>

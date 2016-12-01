@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+
+<p>{{1000 | currency}}</p>
+<!--currency参数一: 字符串,参数二:保留几位小数-->
+<p>{{1000.46545 | currency: "日元" : 2}}</p>
+<p>{{result}}</p>
+<p>{{1480561681000 | date : "yyyy-MM-dd HH:mm:ss"}}</p>
+<p>{{'dhf我adhfdhfadk' | limitTo : 3 : 3}}</p>
+<p>{{3.1415926 | number : 3}}</p>
+<pre>{{ {name:"李威",age:20} }}</pre>
+<pre>{{ {name:"李威",age:20} | json}}</pre>
+<pre>{{ {name:"李威",age:20} | json : 10}}</pre>
+<input ng-model="name" type="text">
+<p ng-repeat=" per in arr | filter : name">{{per}}</p>
+
+
+<script src="../bower_components/angular/angular.js" type="text/javascript"></script>
+<script type="text/javascript">
+    angular.module("myApp",[]).controller("myController",["$scope","$filter",function ($scope,$filter) {
+        $scope.result = $filter("currency")(24545.454542,"*",1);
+        $scope.arr = ["李威","曲健","刘晟鑫","pv","aa","ab"];
+    }])
+</script>
+</body>
+</html>

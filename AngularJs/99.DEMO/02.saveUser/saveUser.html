@@ -112,6 +112,11 @@
                     canAdd = true;
                 }
             });
+            if ($scope.canWrite){
+                alert("修改成功!!!");
+                $scope.editNewUser();
+                canAdd = false;
+            }
             if (canAdd){
                 $scope.users.push(newUser);
                 $scope.editNewUser();
@@ -136,11 +141,6 @@
             $scope.canWrite = true;
             canAdd = false;
         }
-
-
-
-
-
     }])
 </script>
 </body>
