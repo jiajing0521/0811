@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>163网易新闻</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body ng-app="163App">
+<!--<body>-->
+
+<div ng-view></div>
+<!--导航条-->
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container-fluid">
+        <div class="row nav-row">
+            <div class=" col-xs-3 text-center nav-active"><a href="#/home"><i class="glyphicon glyphicon-home"></i><br>新闻</a></div>
+            <div class=" col-xs-3 text-center"><a href="#/live"><i class="glyphicon glyphicon-play-circle"></i><br>直播</a></div>
+            <div class=" col-xs-3 text-center"><a href="#/topic"><i class="glyphicon glyphicon-comment"></i><br>话题</a></div>
+            <div class=" col-xs-3 text-center"><a href="#"><i class="glyphicon glyphicon-user"></i><br>我</a></div>
+        </div>
+    </div>
+</nav>
+
+<script src="./bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="./bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+<script src="./bower_components/angular/angular.js" type="text/javascript"></script>
+<script src="./bower_components/angular-route/angular-route.js" type="text/javascript"></script>
+
+<script src="./app.js" type="text/javascript"></script>
+<script src="./home/controller.js" type="text/javascript"></script>
+<script src="./live/controller.js" type="text/javascript"></script>
+<script src="./topic/controller.js" type="text/javascript"></script>
+</body>
+</html>

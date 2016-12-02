@@ -1,32 +1,28 @@
-<h1 class="page-header">正在热映</h1>
-<div ng-controller="in_theatersController">
-    <div class="container-fluid">
-        <ul class="list-group">
-            <!--<a href="{{ movie.alt }}">-->
-            <li ng-repeat="movie in movies" class="list-group-item">
-                <span class="badge">{{ movie.rating.average }}</span>
-                <ul class="media-list">
-                    <li class="media">
-                        <a class="media-left" href="{{ movie.alt }}">
-                            <img src="{{movie.images.small }}" alt="{{ movie.images.medium }}">
-                        </a>
-                        <div class="media-body">
-                            <h2 class="media-heading"><a href="{{ movie.alt }}"">{{ movie.title }}</a> </h2>
-                            <p>导演: <a href="{{movie.directors[0].alt}}">{{ movie.directors[0].name }}</a></p>
-                            <p>类型: <span ng-repeat=" genre in movie.genres">{{genre}} </span> </p>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <!--</a>-->
-        </ul>
-        <!--分页-->
-        <nav>
-            <ul class="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li ng-repeat="page in pages"><a href="#">{{page}}</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
-        </nav>
-    </div>
+<h1 class="page-header">{{title}}</h1>
+<div class="list-group">
+    <a ng-repeat="movie in subjects" href="#" class="list-group-item">
+        <div class="media">
+            <div class="media-left" href="#">
+                <img ng-src="{{movie.images.small}}" alt="{{movie.images.small}}">
+            </div>
+            <div class="media-body">
+                <h2 class="media-heading">{{ movie.title }}</h2>
+                <p>导演: {{movie.directors[0].name}}</p>
+            </div>
+        </div>
+    </a>
+</div>
+<!--分页-->
+<p ng-show="!showLoading">当前第{{currentPage}}页 总共{{totalPageCount}}页</p>
+<nav ng-show="!showLoading">
+    <ul class="pager">
+        <li><input ng-disabled="currentPage<=1" ng-click="goWhere(currentPage-1)" type="button" value="上一页"></input></li>
+        <li><input ng-disabled="currentPage>=totalPageCount" ng-click="goWhere(currentPage+1)" type="button" value="下一页"></input></li>
+    </ul>
+</nav>
+
+<!--加载动画-->
+<div class="spinner" ng-show="showLoading">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
 </div>

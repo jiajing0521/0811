@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="aa605546-4922-40c5-bf8e-1da80613e254" name="local" url="http://localhost/GIT_space/">
+      <webServer id="aa605546-4922-40c5-bf8e-1da80613e254" name="local" url="http://localhost/GIT_space/0811">
         <fileTransfer host="" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
