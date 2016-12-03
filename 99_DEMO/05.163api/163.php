@@ -45,7 +45,8 @@ if (isset($_GET["callback"]) && isset($_GET["type"])){
             break;
         //话题接口
         case "topic":
-            $result = httpGet("http://c.m.163.com/newstopic/list/expert/5aSn6L%2Be/0-10.html");
+            $page1 = $_GET["page1"];
+            $result = httpGet("http://c.m.163.com/newstopic/list/expert/5aSn6L%2Be/0-{$page1}.html");
             echo "{$cb}({$result})";
             break;
         default :

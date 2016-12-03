@@ -4,18 +4,21 @@
 
 <div class="container-fluid">
     <!--头条-->
-    <ul class="toutiao list-unstyled text-center">
-        <!--<li><a href="javascript:viod(0)" class="toutiaoActive">头条</a></li>-->
-        <li class="toutiaoActive">头条</li>
-        <li>要闻</li>
-        <li>体育</li>
-        <li>科技</li>
-        <li>网易</li>
-    </ul>
+    <div class="toutiao-wrap">
+        <ul class="toutiao list-unstyled text-center">
+            <!--<li><a href="javascript:viod(0)" class="toutiaoActive">头条</a></li>-->
+            <li class="toutiaoActive">头条</li>
+            <li>要闻</li>
+            <li>体育</li>
+            <li>科技</li>
+            <li>网易</li>
+        </ul>
+    </div>
+
 
 </div>
 <!--大图滚动-->
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic" class="carousel slide slider-wrap" data-ride="carousel" data-interval="2000">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -58,20 +61,26 @@
         </div>
     </div>
 </div>
+
 <div class="content">
     <div class="container-fluid">
-        <div class="list-group">
-            <a ng-repeat="new in news" href="#" class="list-group-item">
+        <div class="list-group newsHome">
+            <a ng-repeat="newList in news" href="javascript:void(0)" class="list-group-item">
                 <div class="media">
-                    <div class="media-left" href="#">
-                        <img ng-src="{{movie.images.small}}" alt="{{movie.images.small}}">
+                    <div class="media-left" href="javascript:void(0)">
+                        <img ng-src="{{newList.img}}" alt="{{newList.imgsrc}}">
                     </div>
                     <div class="media-body">
-                        <h2 class="media-heading">{{ movie.title }}</h2>
-                        <p>导演: {{movie.directors[0].name}}</p>
+                        <h4 class="media-heading newsHomeTxt">{{ newList.title }}</h4>
                     </div>
                 </div>
             </a>
         </div>
     </div>
+</div>
+
+<!--加载动画-->
+<div class="spinner" ng-show="showLoading">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
 </div>

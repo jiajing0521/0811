@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
 }
-/*html,body{*/
-    /*width: 100%;*/
-/*}*/
+html,body{
+    width: 100%;
+    height:100%;
+}
 body {
     padding-top: 70px;
+    padding-bottom: 35px;
 }
 .navbar-fixed-bottom a{
     color: inherit;
@@ -15,13 +17,23 @@ body {
 .nav-active{
     color: red;
 }
+.toutiao-wrap{
+    position: fixed;
+    left: 0;
+    top: 60px;
+    background-color: white;
+    z-index: 2;
+    width: 100%;
+}
 .toutiao{
     overflow: hidden;
     font-size: 20px;
+    padding-top: 10px;
 }
 .toutiao li{
     float: left;
     width: 20%;
+    text-decoration: underline;
 }
 a{
     color: black;
@@ -30,6 +42,9 @@ a{
 .toutiaoActive{
     color: red;
     font-size: 22px;
+}
+.slider-wrap{
+    margin-top: 40px;
 }
 .carousel-caption {
     position: absolute;
@@ -54,4 +69,186 @@ a{
     margin-left: -30%;
     text-align: center;
     list-style: none;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border-left: 0;
+    border-right: 0;
+}
+.newsHome .media-left{
+    width: 40%;
+    height: 100px;
+}
+.newsHome .media-left img{
+    width: 100%;
+    height: 100%;
+}
+.newsHome .media-body .newsHomeTxt{
+    line-height: 1.2;
+}
+
+
+/****************************直播********************************/
+.liveTitle{
+    color: white;
+    display: -webkit-box;
+    width: 80%;
+    margin: 10px auto;
+    height: 50px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+.liveTitleAct{
+    background-color: white;
+    color: red;
+}
+.liveTitle p{
+    -webkit-box-flex: 1;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-decoration: underline;
+    border-radius: 25px;
+}
+.live-content{
+
+}
+.live-lists{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.live-list{
+    -webkit-box-flex: 1;
+    height: 200px;
+    margin-top: 10px;
+    position: relative;
+}
+.live-list img{
+    width: 100%;
+    height: 100%;
+}
+.live-list .live-mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.2);
+
+}
+.live-list .live-mask .live-list-title{
+    color: white;
+    margin-top: 35%;
+}
+
+
+.showLoading_live{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50% -50%);
+}
+
+/******************话题*********************/
+.topic-heading{
+    width: 70px;
+    height: 70px;
+    margin-top: 5%;
+    border: 3px solid white;
+    border-radius: 35px;
+    z-index: 2;
+    position: relative;
+
+}
+.topic-img{
+    width: 100%;
+    height:100%;
+    margin-top: -8%;
+}
+.topic-title{
+    line-height: 1.5em;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.topic-other{
+    color:#c0c0c0;
+    position: relative;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.concern{
+    color: white;
+    background-color: red;
+    width: 20%;
+    height:30px;
+    border-radius: 25px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 2%;
+    top: -30%;
+}
+
+
+
+
+
+/*loading加载*/
+.spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #333;
+    border-radius: 100%;
+
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 50% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}
+/****************/
+.pacman {
+    position: relative;
+    margin-top: 60%;
+    margin-left: 50%;
 }

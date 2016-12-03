@@ -1,1 +1,30 @@
-<h1>这是live</h1>
+<nav class="navbar navbar-fixed-top text-center" role="navigation"  style="background-color: red;color: white;">
+    <div class="liveTitle">
+        <p class="liveTitleAct">热门</p>
+        <p>分类</p>
+        <p>订阅</p>
+    </div>
+</nav>
+<div class="container-fluid" style="padding-left: 0;padding-right: 0">
+    <div class="live-content">
+        <ul class="list-unstyled live-lists">
+            <li class="live-list" ng-repeat="newList in news">
+                <img ng-src="{{ newList.image }}" alt="">
+                <div class="live-mask">
+                    <h3 class="live-list-title">{{ newList.roomName }}</h3>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--加载动画-->
+<div class="loader" ng-show="showLoading_live" id="showLoading_live">
+    <div class="loader-inner pacman">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>

@@ -1,1 +1,48 @@
-<h1>这是topic</h1>
+<nav class="navbar navbar-fixed-top text-center" role="navigation"  style="background-color: red;color: white;">
+    <div class="liveTitle">
+        <p class="liveTitleAct">问吧</p>
+        <p>话题</p>
+        <p>关注</p>
+        <a href="#/topic/1">kglf</a>
+    </div>
+</nav>
+
+<div class="topic-content" ng-controller="topicController">
+    <div class="container-fluid" style="padding-left: 0;padding-right: 0">
+        <ul class="topic-lists">
+            <li class="topic-list" ng-repeat="newList in news">
+                <img class="topic-heading" ng-src="{{ newList.headpicurl }}" alt="{{ newList.headpicurl }}">
+                <span>
+                    <span class="h4">{{ newList.name }}</span>
+                    <span class="h4" style="color:#c0c0c0"> | </span>
+                    <span class="h4" style="color:#c0c0c0"> {{ newList.title }}</span>
+                </span>
+                <img class="topic-img" ng-src="{{ newList.picurl }}" alt="{{ newList.picurl }}">
+                <h3 class="topic-title" >{{ newList.alias }}</h3>
+                <p class="topic-other h4">
+                    <span style="color: #00b3ee">{{newList.classification}} </span>
+                    <span> | </span>
+                    <span> {{newList.concernCount/10000>1?(newList.concernCount/10000 | number:1):newList.concernCount}}万 关注 </span>
+                    <span> | </span>
+                    <span> {{newList.questionCount/10000>1?(newList.questionCount/10000 | number:1):newList.questionCount}} 提问</span>
+
+                    <span class="concern">+ 关注</span>
+                </p>
+                <hr style="height: 20px;background-color: rgb(234,234,234)">
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+<!--加载动画-->
+<div class="loader" ng-show="showLoading_live" id="showLoading_live">
+    <div class="loader-inner pacman">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
