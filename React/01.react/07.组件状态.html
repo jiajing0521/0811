@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="test"></div>
+
+
+<script src="../react-15.3.1/build/react.js" type="text/javascript"></script>
+<script src="../react-15.3.1/build/react-dom.js" type="text/javascript"></script>
+<script src="../react-15.3.1/browser.min.js" type="text/javascript"></script>
+
+<script type="text/babel">
+
+    //组件
+    var Hello = React.createClass({
+        //声明组件状态,必须返回对象
+        //state和props的区别:
+        // props一般不会被修改,用来保存一些固定的属性,
+        // state可以随意修改,用来表示一些状态
+        getInitialState: function () {
+            return {liked: true}
+        },
+        handleClick: function () {
+            //给状态赋值
+            this.setState({
+                liked: !this.state.liked
+            })
+        },
+        render: function () {
+            var str = this.state.liked?"喜欢":"不喜欢";
+            return <h1 onClick={this.handleClick}>JK{str}JJ</h1>
+        }
+    });
+    ReactDOM.render(
+        <Hello title="JJ"/>,
+        document.getElementById("test")
+    )
+
+</script>
+</body>
+</html>

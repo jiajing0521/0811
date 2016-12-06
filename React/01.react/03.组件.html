@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="test"></div>
+
+<script src="../react-15.3.1/build/react.js" type="text/javascript"></script>
+<script src="../react-15.3.1/build/react-dom.js" type="text/javascript"></script>
+<script src="../react-15.3.1/browser.min.js" type="text/javascript"></script>
+<!--script标签中type需要改为text/babel,来解析-->
+<script type="text/babel">
+    //组件
+    //React.createClass(对象)
+    var Hello = React.createClass({
+        render: function () {
+            //this.props能获取到组件身上的属性
+            return <h1>{this.props.name},今天好冷啊!{this.props.title}!</h1>
+        }
+    });
+
+    ReactDOM.render(
+        //单标签
+        <Hello name="JK" title="多穿点吧"/>,
+        document.getElementById("test")
+    )
+</script>
+</body>
+</html>

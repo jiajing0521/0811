@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>点击新建插入</title>
+		<style type="text/css">
+			#all{
+				width: 200px;
+				height: 300px;
+				border: 1px solid green;
+				text-align: center;
+			}
+			#all input{
+				width: 150px;
+				height: 30px;
+				border: 1px solid red;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="all"></div>
+		<script type="text/javascript">
+			var all = document.getElementById("all");
+			var guoJia = document.createElement("input");
+			var shengFen = document.createElement("input");
+			var chengShi = document.createElement("input");
+			var diQu = document.createElement("input");
+			
+			all.appendChild(guoJia);
+			guoJia.value = "国家";
+			
+			guoJia.onclick = function(){
+				//判断父级是否为all，如果是则证明已经存在，不需要再插入
+				//如果不是，则证明不存在，需要插入
+				if(shengFen.parentNode != all){
+					all.appendChild(shengFen);
+					shengFen.value = "省份";
+				}
+			}
+			shengFen.onclick = function(){
+				if(chengShi.parentNode != all){
+					all.appendChild(chengShi);
+					chengShi.value = "城市";
+				}
+			}
+			chengShi.onclick = function(){
+				if(diQu.parentNode != all){
+					all.appendChild(diQu);
+					diQu.value = "地区";
+				}
+			}
+		</script>
+	</body>
+</html>

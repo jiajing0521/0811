@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6d4b;&#x8bd5;1/AppDelegate.swift"
+            timestampString = "502619536.695414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_TFCX101_rqJbsCIf11AppDelegateD"
+                  moduleName = "&#x6d4b;&#x8bd5;1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/XAMPP/xamppfiles/htdocs/GIT_space/0811/%E6%B5%8B%E8%AF%951/%E6%B5%8B%E8%AF%951/AppDelegate.swift"
+                  timestampString = "502619537.095445"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_TFCX101_rqJbsCIf11AppDelegatecfMS0_FT_S0_"
+                  moduleName = "&#x6d4b;&#x8bd5;1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/XAMPP/xamppfiles/htdocs/GIT_space/0811/%E6%B5%8B%E8%AF%951/%E6%B5%8B%E8%AF%951/AppDelegate.swift"
+                  timestampString = "502619537.095827"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "&#x6d4b;&#x8bd5;1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/XAMPP/xamppfiles/htdocs/GIT_space/0811/%E6%B5%8B%E8%AF%951/%E6%B5%8B%E8%AF%951/AppDelegate.swift"
+                  timestampString = "502619537.096171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
