@@ -66,7 +66,7 @@ export default class XieCheng extends Component {
                                 <Text style={XieChengStyle.fontColorW}>机票</Text>
                             </View>
                             <View>
-                                {/*<Image />*/}
+                                <Image source={require("./img/jipiao.png")} style={{width:50,height:40,marginTop:8}}/>
                             </View>
                         </View>
                         <View style={[XieChengStyle.classifyListItem,XieChengStyle.bgBlue]}>
@@ -92,7 +92,7 @@ export default class XieCheng extends Component {
                                 <Text style={XieChengStyle.fontColorW}>旅游</Text>
                             </View>
                             <View>
-                                {/*<Image />*/}
+                                <Image source={require("./img/lvyou.png")} style={{width:50,height:40,marginTop:8}}/>
                             </View>
                         </View>
                         <View style={[XieChengStyle.classifyListItem,XieChengStyle.bgGreen]}>
