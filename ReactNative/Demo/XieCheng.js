@@ -40,7 +40,7 @@ export default class XieCheng extends Component {
                                 <Text style={XieChengStyle.fontColorW}>酒店</Text>
                             </View>
                             <View>
-                                {/*<Image />*/}
+                                <Image source={require("./img/jiudian.png")} style={{width:50,height:40,marginTop:8}}/>
                             </View>
                         </View>
                         <View style={[XieChengStyle.classifyListItem,XieChengStyle.bgPink]}>
@@ -140,7 +140,16 @@ export default class XieCheng extends Component {
                     </View>
                 </View>
                 <View style={XieChengStyle.tabWrap}>
-                    <View style={XieChengStyle.tabItem}>
+                    <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
+                        <Text>自由行</Text>
+                    </View>
+                    <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
+                        <Text>自由行</Text>
+                    </View>
+                    <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
+                        <Text>自由行</Text>
+                    </View>
+                    <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
                         <Text>自由行</Text>
                     </View>
                 </View>
@@ -196,6 +205,19 @@ const XieChengStyle = StyleSheet.create({
         justifyContent:"center",
         alignItems:"center",
     },
+    tabWrap:{
+        marginTop:5,
+        marginLeft: 2,
+        marginRight: 2,
+        flexWrap: "wrap",
+        flexDirection: "row",
+        justifyContent: "space-between",
+    },
+    tabItem:{
+        height: 50,
+        flex: 1,
+        backgroundColor: "white",
+    },
     bgPink:{
         backgroundColor: "rgb(250,82,102)",
     },
@@ -215,6 +237,10 @@ const XieChengStyle = StyleSheet.create({
     borderC:{
         borderWidth: 1,
         borderColor: "#ccc",
+    },
+    borderAll:{
+        borderWidth:1,
+        borderColor:"rgb(239,239,239)",
     },
     borderB:{
         borderBottomWidth:2,

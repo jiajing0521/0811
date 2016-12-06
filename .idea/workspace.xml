@@ -2,52 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab442dd9-ac7c-4158-9f15-53428924eb1d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReactNative/Demo/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReactNative/Demo/img/wode.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReactNative/Demo/qq.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试.xcodeproj/project.xcworkspace/xcuserdata/dllo.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试/127.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1.xcodeproj/project.xcworkspace/xcuserdata/dllo.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/React/01.react/02.表达式.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/React/01.react/03.组件.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/React/01.react/04.组件.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/React/01.react/05.组件属性.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/React/01.react/06.组件事件.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/React/01.react/07.组件状态.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/React/01.react/08.组件状态.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/React/01.react/09.真实DOM.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReactNative/Demo/QQ.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReactNative/Demo/XieCheng.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试.xcodeproj/project.pbxproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试.xcodeproj/project.xcworkspace/contents.xcworkspacedata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试.xcodeproj/xcuserdata/dllo.xcuserdatad/xcschemes/xcschememanagement.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试.xcodeproj/xcuserdata/dllo.xcuserdatad/xcschemes/测试.xcscheme" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试/AppDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试/AppDelegate.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试/Assets.xcassets/AppIcon.appiconset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试/Base.lproj/LaunchScreen.storyboard" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试/Base.lproj/Main.storyboard" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试/Info.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试/ViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试/ViewController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试/main.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试/测试/练习_点击新建插入.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1.xcodeproj/project.pbxproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1.xcodeproj/project.xcworkspace/contents.xcworkspacedata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1.xcodeproj/xcuserdata/dllo.xcuserdatad/xcschemes/xcschememanagement.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1.xcodeproj/xcuserdata/dllo.xcuserdatad/xcschemes/测试1.xcscheme" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1/AppDelegate.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1/Assets.xcassets/AppIcon.appiconset/Contents.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1/Base.lproj/LaunchScreen.storyboard" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1/Base.lproj/Main.storyboard" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1/Info.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1/ViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/测试1/测试1/练习复合改变.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReactNative/Demo/img/jiudian.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJs/99.DEMO/04.163App/index.html" afterPath="$PROJECT_DIR$/AngularJs/99.DEMO/04.163App/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJs/99.DEMO/04.163App/topic/controller3.js" afterPath="$PROJECT_DIR$/AngularJs/99.DEMO/04.163App/topic/controller3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJs/99.DEMO/04.163App/topic/view.html" afterPath="$PROJECT_DIR$/AngularJs/99.DEMO/04.163App/topic/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularJs/99.DEMO/04.163App/topic/view1.html" afterPath="$PROJECT_DIR$/AngularJs/99.DEMO/04.163App/topic/view1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReactNative/Demo/XieCheng.js" afterPath="$PROJECT_DIR$/ReactNative/Demo/XieCheng.js" />
     </list>
     <ignored path="0811.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,11 +80,10 @@
       <file leaf-file-name="XieCheng.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ReactNative/Demo/XieCheng.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="143" column="33" lean-forward="false" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+            <state relative-caret-position="1210">
+              <caret line="211" column="23" lean-forward="false" selection-start-line="211" selection-start-column="23" selection-end-line="211" selection-end-column="23" />
               <folding>
                 <element signature="e#39#80#0" expanded="true" />
-                <element signature="e#1211#7996#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -402,12 +358,12 @@
       <workItem from="1480644848424" duration="6000" />
       <workItem from="1480665215486" duration="2671000" />
       <workItem from="1480730768478" duration="5878000" />
-      <workItem from="1480898580269" duration="42994000" />
+      <workItem from="1480898580269" duration="44470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63722000" />
+    <option name="totallyTimeSpent" value="65198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="444" y="23" width="1602" height="975" extended-state="0" />
@@ -813,11 +769,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ReactNative/Demo/XieCheng.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="143" column="33" lean-forward="false" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+        <state relative-caret-position="1210">
+          <caret line="211" column="23" lean-forward="false" selection-start-line="211" selection-start-column="23" selection-end-line="211" selection-end-column="23" />
           <folding>
             <element signature="e#39#80#0" expanded="true" />
-            <element signature="e#1211#7996#0" expanded="false" />
           </folding>
         </state>
       </provider>
