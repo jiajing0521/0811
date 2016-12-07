@@ -32,12 +32,14 @@ export default class XieCheng extends Component {
                         </View>
                     </View>
                 </View>
-                {/*<View style={XieChengStyle.slider}>*/}
-                    <ScrollView style={{height:100}}>
-                        <Image source={require("./img/129.jpg")}/>
-                        <Image source={require("./img/130.jpg")}/>
-                        <Image source={require("./img/131.jpg")}/>
-                    </ScrollView>
+                <ScrollView horizontal={true} pagingEnabled={true} style={{height:150}}>
+                    <Image style={{width:414,height:150}} source={require("./img/129.jpg")}/>
+                    <Image style={{width:414,height:150}} source={require("./img/130.jpg")}/>
+                    <Image style={{width:414,height:150}} source={require("./img/131.jpg")}/>
+                    <Image style={{width:414,height:150}} source={require("./img/129.jpg")}/>
+                    <Image style={{width:414,height:150}} source={require("./img/130.jpg")}/>
+                    <Image style={{width:414,height:150}} source={require("./img/131.jpg")}/>
+                </ScrollView>
                 <View style={XieChengStyle.classify}>
                     <View style={XieChengStyle.classifyList}>
                         <View style={[XieChengStyle.classifyListItem,XieChengStyle.bgPink,XieChengStyle.center]}>

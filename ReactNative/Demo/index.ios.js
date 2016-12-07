@@ -11,7 +11,8 @@ import {
   Text,
   View,
   Image,
-  TextInput
+  TextInput, 
+  ScrollView
 } from 'react-native';
 
 export default class Demo extends Component {
@@ -138,9 +139,9 @@ var XieCheng = require("./XieCheng");
 class XieChengModule extends Component{
     render(){
         return(
-            <View style={XieChengModuleStyle.all}>
+            <ScrollView style={XieChengModuleStyle.all}>
                 <XieCheng />
-            </View>
+            </ScrollView>
         )
     }
 
@@ -227,4 +228,46 @@ const xiechengStyle = StyleSheet.create({
       backgroundColor:"red",
     }
 });
+
+class IScrolledDown extends Component {
+    render() {
+        return(
+            <ScrollView>
+                <Text style={{fontSize:20}}>Scroll me plz</Text>
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Text style={{fontSize:20}}>If you like</Text>
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Text style={{fontSize:20}}>Scrolling down</Text>
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Text style={{fontSize:20}}>What's the best</Text>
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Text style={{fontSize:20}}>Framework around?</Text>
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Image source={require('./img/129.jpg')} />
+                <Text style={{fontSize:30}}>React Native</Text>
+            </ScrollView>
+        );
+    }
+}
+
 AppRegistry.registerComponent('Demo', () => XieChengModule);
+// AppRegistry.registerComponent('Demo', () => IScrolledDown);
