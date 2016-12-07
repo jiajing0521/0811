@@ -10,7 +10,8 @@ import {
     Image,
     TextInput,
     TouchableOpacity,
-    AlertIOS
+    AlertIOS,
+    ScrollView
 } from 'react-native';
 
 export default class XieCheng extends Component {
@@ -18,6 +19,7 @@ export default class XieCheng extends Component {
         return(
             <View style={XieChengStyle.container}>
                 <View style={XieChengStyle.header}>
+                    <Image style={[XieChengStyle.search]} source={require("./img/sousuo.png")} />
                     <View style={[XieChengStyle.headerV1,XieChengStyle.center]}>
                         <TextInput style={[XieChengStyle.borderC,XieChengStyle.headerInput]} placeholder={"搜索:目的地/酒店/景点/航班号"} />
                     </View>
@@ -30,9 +32,12 @@ export default class XieCheng extends Component {
                         </View>
                     </View>
                 </View>
-                <View style={XieChengStyle.slider}>
-                    <Text>SLIDER</Text>
-                </View>
+                {/*<View style={XieChengStyle.slider}>*/}
+                    <ScrollView style={{height:100}}>
+                        <Image source={require("./img/129.jpg")}/>
+                        <Image source={require("./img/130.jpg")}/>
+                        <Image source={require("./img/131.jpg")}/>
+                    </ScrollView>
                 <View style={XieChengStyle.classify}>
                     <View style={XieChengStyle.classifyList}>
                         <View style={[XieChengStyle.classifyListItem,XieChengStyle.bgPink,XieChengStyle.center]}>
@@ -40,7 +45,7 @@ export default class XieCheng extends Component {
                                 <Text style={XieChengStyle.fontColorW}>酒店</Text>
                             </View>
                             <View>
-                                <Image source={require("./img/jiudian.png")} style={{width:50,height:40,marginTop:8}}/>
+                                <Image source={require("./img/jiudian1.png")} style={{marginTop:8}}/>
                             </View>
                         </View>
                         <View style={[XieChengStyle.classifyListItem,XieChengStyle.bgPink]}>
@@ -66,7 +71,7 @@ export default class XieCheng extends Component {
                                 <Text style={XieChengStyle.fontColorW}>机票</Text>
                             </View>
                             <View>
-                                <Image source={require("./img/jipiao.png")} style={{width:50,height:40,marginTop:8}}/>
+                                <Image source={require("./img/jipiao1.png")} style={{marginTop:8}}/>
                             </View>
                         </View>
                         <View style={[XieChengStyle.classifyListItem,XieChengStyle.bgBlue]}>
@@ -92,7 +97,7 @@ export default class XieCheng extends Component {
                                 <Text style={XieChengStyle.fontColorW}>旅游</Text>
                             </View>
                             <View>
-                                <Image source={require("./img/lvyou.png")} style={{width:50,height:40,marginTop:8}}/>
+                                <Image source={require("./img/lvyou1.png")} style={{marginTop:8}}/>
                             </View>
                         </View>
                         <View style={[XieChengStyle.classifyListItem,XieChengStyle.bgGreen]}>
@@ -140,17 +145,68 @@ export default class XieCheng extends Component {
                     </View>
                 </View>
                 <View style={XieChengStyle.tabWrap}>
-                    <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
-                        <Text>自由行</Text>
+                    <TabWrapItem title="自由行" imgSrc={require("./img/ziyouxing.png")} pinkColor={XieChengStyle.tabWrapFirst}/>
+                    <TabWrapItem title="主题游" imgSrc={require("./img/ziyouxing.png")} />
+                    <TabWrapItem title="一日游" imgSrc={require("./img/ziyouxing.png")} />
+                    <TabWrapItem title="顶级游" imgSrc={require("./img/ziyouxing.png")} />
+                </View>
+                <TabWrapEx title1="酒店+景点" title2="亲子/游学" title3="外币兑换" title4="加盟合作" imgSrc1={require("./img/jiudianjingdian.png")} />
+                <TabWrapEx title1="拼车旅行" title2="机场停车" title3="行李寄送" title4="更多服务" imgSrc1={require("./img/pinchelvxing.png")} />
+                <TabWrapEx title1="拼车旅行" title2="机场停车" title3="行李寄送" title4="更多服务" imgSrc1={require("./img/pinchelvxing.png")} />
+            </View>
+        )
+    }
+}
+
+class TabWrapItem extends Component{
+    render(){
+        return(
+            <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
+                <View>
+                    <Image source={this.props.imgSrc} />
+                </View>
+                <View style={this.props.pinkColor}>
+                    <Text style={{fontSize:12,marginTop:5}}>{this.props.title}</Text>
+                </View>
+            </View>
+        )
+    }
+}
+
+class TabWrapEx extends Component{
+    render(){
+        return(
+            <View style={XieChengStyle.tabWrap}>
+                <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
+                    <View>
+                        <Image source={this.props.imgSrc1} />
                     </View>
-                    <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
-                        <Text>自由行</Text>
+                    <View>
+                        <Text style={{fontSize:12,marginTop:5}}>{this.props.title1}</Text>
                     </View>
-                    <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
-                        <Text>自由行</Text>
+                </View>
+                <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
+                    <View>
+                        <Image source={this.props.imgSrc1} />
                     </View>
-                    <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
-                        <Text>自由行</Text>
+                    <View>
+                        <Text style={{fontSize:12,marginTop:5}}>{this.props.title2}</Text>
+                    </View>
+                </View>
+                <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
+                    <View>
+                        <Image source={this.props.imgSrc1} />
+                    </View>
+                    <View>
+                        <Text style={{fontSize:12,marginTop:5}}>{this.props.title3}</Text>
+                    </View>
+                </View>
+                <View style={[XieChengStyle.tabItem,XieChengStyle.borderAll,XieChengStyle.center]}>
+                    <View>
+                        <Image source={this.props.imgSrc1} />
+                    </View>
+                    <View>
+                        <Text style={{fontSize:12,marginTop:5}}>{this.props.title4}</Text>
                     </View>
                 </View>
             </View>
@@ -168,6 +224,12 @@ const XieChengStyle = StyleSheet.create({
         height: 50,
         borderBottomWidth: 1,
         borderBottomColor: "#ccc",
+    },
+    search:{
+        position: "absolute",
+        left: 17,
+        top:17,
+        zIndex: 2,
     },
     headerV1:{
         flex:8,
@@ -206,15 +268,17 @@ const XieChengStyle = StyleSheet.create({
         alignItems:"center",
     },
     tabWrap:{
-        marginTop:5,
         marginLeft: 2,
         marginRight: 2,
         flexWrap: "wrap",
         flexDirection: "row",
         justifyContent: "space-between",
     },
+    tabWrapFirst:{
+        backgroundColor: "pink",
+    },
     tabItem:{
-        height: 50,
+        height: 60,
         flex: 1,
         backgroundColor: "white",
     },
