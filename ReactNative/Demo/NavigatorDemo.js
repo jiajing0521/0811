@@ -34,6 +34,7 @@ var Home = React.createClass({
         this.props.navigator.push({
             component: NextPage,
             title:'详情',
+            //从前一页传到下一页时使用它,下一页用时this.props.name
             passProps: {name:'lee'},
         })
     }
@@ -60,7 +61,6 @@ var NavigatorDemo = React.createClass({
                 initialRoute={{
                     component: Home,
                     title: '网易',
-
                 }}
             />
         )

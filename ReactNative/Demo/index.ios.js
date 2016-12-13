@@ -268,6 +268,9 @@ class IScrolledDown extends Component {
         );
     }
 }
+var ListViewDemo = require("./listViewDemo");
 
-AppRegistry.registerComponent('Demo', () => XieChengModule);
+AppRegistry.registerComponent('Demo', () => ListViewDemo);
+
+// AppRegistry.registerComponent('Demo', () => XieChengModule);
 // AppRegistry.registerComponent('Demo', () => IScrolledDown);
